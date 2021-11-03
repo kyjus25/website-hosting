@@ -4,13 +4,25 @@ services:
     image: strapi/strapi
     volumes:
       - ./backend:/srv/app
-    ports:
-      - '1337:1337'
-  frontend:
+    restart: always
+    environment:
+      VIRTUAL_HOST: develop2-rest.fireofgodmovementinternational.com
+      LETSENCRYPT_HOST: develop2-rest.fireofgodmovementinternational.com
+    expose:
+      - 1337
+  fogm:
     image: node:lts-alpine
     working_dir: /home/node/app
     volumes:
-      - ./frontend:/home/node/app
+      - ./fogm:/home/node/app
+    restart: always
+    environment:
+      VIRTUAL_HOST: develop2.fireofgodmovementinternational.com
+      LETSENCRYPT_HOST: develop2.fireofgodmovementinternational.com
     command: "npm run dev"
-    ports:
-      - '80:5000'
+    expose:
+      - 5000
+networks:
+  default:
+    external:
+      name: nginx-proxy
