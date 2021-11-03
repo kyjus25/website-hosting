@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    image: strapi/strapi
+    volumes:
+      - ./backend:/srv/app
+    ports:
+      - '1337:1337'
+  frontend:
+    image: node:lts-alpine
+    working_dir: /home/node/app
+    volumes:
+      - ./frontend:/home/node/app
+    command: "npm run dev"
+    ports:
+      - '80:5000'
