@@ -9,8 +9,7 @@
         {#if content}
             <SvelteMarkdown source={content} />
         {:else}
-                <h1>404</h1>
+            <h1>404</h1>
         {/if}
-        
     </div>
 </article>
