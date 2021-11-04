@@ -13,8 +13,8 @@
 	let loading = true;
 
 	async function fetchData() {
-		pages = await fetch(`${window.BASE_URL}/api/collections/get/Pages`).then(response => response.json()).then(response => response.entries);
-		posts = await fetch(`${window.BASE_URL}/api/collections/get/Posts`).then(response => response.json()).then(response => response.entries);
+		pages = await fetch(`${window.BASE_URL}/pages`).then(response => response.json());
+		posts = await fetch(`${window.BASE_URL}/posts`).then(response => response.json());
 		videos = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC3OLduBLDqPjW0AndY2yYrA&maxResults=10&order=date&type=video&key=AIzaSyABnWW2s4thhFHUPF5FAwt5p1G_pr_faXY`).then(response => response.json()).then(response => response.items);
 		console.log('videos', videos);
 		loading = false;
@@ -32,11 +32,11 @@
 		</div>
 	{:else}
 		<Header/>
-		<Route path="/:id" let:params>
+		<Route path="/pages/:id" let:params>
 			<Gradient />
 			<Page pages={pages} {...params} />
 		</Route>
-		<Route path="/"><Home /></Route>
+		<Route path="/"><Home pages={pages} /></Route>
 		<Footer />
 	{/if}
 </Router>

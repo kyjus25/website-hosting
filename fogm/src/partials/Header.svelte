@@ -11,7 +11,7 @@
       </div>
       <div id="navigation">
         <ul>
-          <li><Link to="/">The Father's House</Link>
+          <li><Link to="/pages/the-fathers-house">The Father's House</Link>
             <ul>
               <li><Link to='/pages/brazil-ministry'>Brazil Ministry</Link>
                 <ul>
