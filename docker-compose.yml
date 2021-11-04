@@ -6,8 +6,8 @@ services:
       - ./backend:/srv/app
     restart: always
     environment:
-      VIRTUAL_HOST: develop2-rest.fireofgodmovementinternational.com
-      LETSENCRYPT_HOST: develop2-rest.fireofgodmovementinternational.com
+      VIRTUAL_HOST: develop-rest.fireofgodmovementinternational.com
+      # LETSENCRYPT_HOST: develop-rest.fireofgodmovementinternational.com
     expose:
       - 1337
   fogm:
@@ -17,8 +17,8 @@ services:
       - ./fogm:/home/node/app
     restart: always
     environment:
-      VIRTUAL_HOST: develop2.fireofgodmovementinternational.com
-      LETSENCRYPT_HOST: develop2.fireofgodmovementinternational.com
+      VIRTUAL_HOST: develop.fireofgodmovementinternational.com
+      # LETSENCRYPT_HOST: develop.fireofgodmovementinternational.com
     command: "npm run dev"
     expose:
       - 5000
