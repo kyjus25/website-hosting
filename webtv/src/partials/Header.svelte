@@ -9,7 +9,17 @@
           {window.TITLE}
         </Link>
       </div>
+
+      <div>
+
+        <input placeholder="Seach for a video or post..." type="text" value="" name="s" id="s">
+
+      </div>
+
+
       <div id="navigation">
+
+
         <ul>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#about">About</a></li>

@@ -28,3 +28,10 @@ body, body * { box-sizing: border-box; }
 .flex-align { align-items: center; }
 
 .flex-justify { justify-content: center; }
+
+header {
+    background-color: #444444;
+    color: white;
+    padding: 20px 30px;
+}
+

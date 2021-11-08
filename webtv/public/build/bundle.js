@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -2208,21 +2208,24 @@ var app = (function () {
 
     function create_fragment$s(ctx) {
     	let header;
-    	let div2;
+    	let div3;
     	let div0;
     	let link;
     	let t0;
     	let div1;
+    	let input;
+    	let t1;
+    	let div2;
     	let ul;
     	let li0;
     	let a0;
-    	let t2;
+    	let t3;
     	let li1;
     	let a1;
-    	let t4;
+    	let t5;
     	let li2;
     	let a2;
-    	let t6;
+    	let t7;
     	let li3;
     	let a3;
     	let current;
@@ -2239,46 +2242,56 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			header = element("header");
-    			div2 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			create_component(link.$$.fragment);
     			t0 = space();
     			div1 = element("div");
+    			input = element("input");
+    			t1 = space();
+    			div2 = element("div");
     			ul = element("ul");
     			li0 = element("li");
     			a0 = element("a");
     			a0.textContent = "Schedule";
-    			t2 = space();
+    			t3 = space();
     			li1 = element("li");
     			a1 = element("a");
     			a1.textContent = "About";
-    			t4 = space();
+    			t5 = space();
     			li2 = element("li");
     			a2 = element("a");
     			a2.textContent = "Blog";
-    			t6 = space();
+    			t7 = space();
     			li3 = element("li");
     			a3 = element("a");
     			a3.textContent = "Contact";
     			attr_dev(div0, "id", "logo");
     			add_location(div0, file$o, 6, 6, 109);
+    			attr_dev(input, "placeholder", "Seach for a video or post...");
+    			attr_dev(input, "type", "text");
+    			input.value = "";
+    			attr_dev(input, "name", "s");
+    			attr_dev(input, "id", "s");
+    			add_location(input, file$o, 14, 8, 223);
+    			add_location(div1, file$o, 12, 6, 208);
     			attr_dev(a0, "href", "#schedule");
-    			add_location(a0, file$o, 13, 14, 256);
-    			add_location(li0, file$o, 13, 10, 252);
+    			add_location(a0, file$o, 23, 14, 384);
+    			add_location(li0, file$o, 23, 10, 380);
     			attr_dev(a1, "href", "#about");
-    			add_location(a1, file$o, 14, 14, 308);
-    			add_location(li1, file$o, 14, 10, 304);
+    			add_location(a1, file$o, 24, 14, 436);
+    			add_location(li1, file$o, 24, 10, 432);
     			attr_dev(a2, "href", "#blog");
-    			add_location(a2, file$o, 15, 14, 354);
-    			add_location(li2, file$o, 15, 10, 350);
+    			add_location(a2, file$o, 25, 14, 482);
+    			add_location(li2, file$o, 25, 10, 478);
     			attr_dev(a3, "href", "#contact");
-    			add_location(a3, file$o, 16, 14, 398);
-    			add_location(li3, file$o, 16, 10, 394);
-    			add_location(ul, file$o, 12, 8, 237);
-    			attr_dev(div1, "id", "navigation");
-    			add_location(div1, file$o, 11, 6, 207);
-    			attr_dev(div2, "class", "wrapper flex");
-    			add_location(div2, file$o, 5, 4, 76);
+    			add_location(a3, file$o, 26, 14, 526);
+    			add_location(li3, file$o, 26, 10, 522);
+    			add_location(ul, file$o, 22, 8, 365);
+    			attr_dev(div2, "id", "navigation");
+    			add_location(div2, file$o, 19, 6, 333);
+    			attr_dev(div3, "class", "wrapper flex");
+    			add_location(div3, file$o, 5, 4, 76);
     			add_location(header, file$o, 4, 0, 63);
     		},
     		l: function claim(nodes) {
@@ -2286,21 +2299,24 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
-    			append_dev(header, div2);
-    			append_dev(div2, div0);
+    			append_dev(header, div3);
+    			append_dev(div3, div0);
     			mount_component(link, div0, null);
-    			append_dev(div2, t0);
-    			append_dev(div2, div1);
-    			append_dev(div1, ul);
+    			append_dev(div3, t0);
+    			append_dev(div3, div1);
+    			append_dev(div1, input);
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, ul);
     			append_dev(ul, li0);
     			append_dev(li0, a0);
-    			append_dev(ul, t2);
+    			append_dev(ul, t3);
     			append_dev(ul, li1);
     			append_dev(li1, a1);
-    			append_dev(ul, t4);
+    			append_dev(ul, t5);
     			append_dev(ul, li2);
     			append_dev(li2, a2);
-    			append_dev(ul, t6);
+    			append_dev(ul, t7);
     			append_dev(ul, li3);
     			append_dev(li3, a3);
     			current = true;
