@@ -2179,19 +2179,19 @@ var app = (function () {
 
     // (8:8) <Link to="/">
     function create_default_slot$2(ctx) {
-    	let i;
+    	let t_value = window.TITLE + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			i = element("i");
-    			attr_dev(i, "class", "fas fa-cross");
-    			add_location(i, file$o, 8, 10, 157);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
     		},
+    		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
@@ -2225,6 +2225,10 @@ var app = (function () {
     	let t6;
     	let li3;
     	let a3;
+    	let t8;
+    	let div2;
+    	let i;
+    	let t9;
     	let current;
 
     	link = new Link$1({
@@ -2260,25 +2264,34 @@ var app = (function () {
     			li3 = element("li");
     			a3 = element("a");
     			a3.textContent = "Contact";
+    			t8 = space();
+    			div2 = element("div");
+    			i = element("i");
+    			t9 = text(" \n        (217) 549-5555");
     			attr_dev(div0, "id", "logo");
-    			add_location(div0, file$o, 6, 6, 109);
+    			add_location(div0, file$o, 6, 6, 112);
     			attr_dev(a0, "href", "#schedule");
-    			add_location(a0, file$o, 13, 14, 270);
-    			add_location(li0, file$o, 13, 10, 266);
+    			add_location(a0, file$o, 13, 14, 274);
+    			add_location(li0, file$o, 13, 10, 270);
     			attr_dev(a1, "href", "#about");
-    			add_location(a1, file$o, 14, 14, 322);
-    			add_location(li1, file$o, 14, 10, 318);
+    			add_location(a1, file$o, 14, 14, 326);
+    			add_location(li1, file$o, 14, 10, 322);
     			attr_dev(a2, "href", "#blog");
-    			add_location(a2, file$o, 15, 14, 368);
-    			add_location(li2, file$o, 15, 10, 364);
+    			add_location(a2, file$o, 15, 14, 372);
+    			add_location(li2, file$o, 15, 10, 368);
     			attr_dev(a3, "href", "#contact");
-    			add_location(a3, file$o, 16, 14, 412);
-    			add_location(li3, file$o, 16, 10, 408);
-    			add_location(ul, file$o, 12, 8, 251);
+    			add_location(a3, file$o, 16, 14, 416);
+    			add_location(li3, file$o, 16, 10, 412);
+    			add_location(ul, file$o, 12, 8, 255);
     			attr_dev(div1, "id", "navigation");
-    			add_location(div1, file$o, 11, 6, 221);
-    			attr_dev(div2, "class", "wrapper flex");
-    			add_location(div2, file$o, 5, 4, 76);
+    			attr_dev(div1, "class", "flex-1");
+    			add_location(div1, file$o, 11, 6, 210);
+    			attr_dev(i, "class", "fas fa-phone");
+    			add_location(i, file$o, 23, 8, 604);
+    			attr_dev(div2, "id", "phone");
+    			add_location(div2, file$o, 22, 6, 579);
+    			attr_dev(div3, "class", "flex flex-align");
+    			add_location(div3, file$o, 5, 4, 76);
     			add_location(header, file$o, 4, 0, 63);
     		},
     		l: function claim(nodes) {
@@ -2286,11 +2299,11 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
-    			append_dev(header, div2);
-    			append_dev(div2, div0);
+    			append_dev(header, div3);
+    			append_dev(div3, div0);
     			mount_component(link, div0, null);
-    			append_dev(div2, t0);
-    			append_dev(div2, div1);
+    			append_dev(div3, t0);
+    			append_dev(div3, div1);
     			append_dev(div1, ul);
     			append_dev(ul, li0);
     			append_dev(li0, a0);
@@ -2303,6 +2316,10 @@ var app = (function () {
     			append_dev(ul, t6);
     			append_dev(ul, li3);
     			append_dev(li3, a3);
+    			append_dev(div3, t8);
+    			append_dev(div3, div2);
+    			append_dev(div2, i);
+    			append_dev(div2, t9);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -2371,189 +2388,53 @@ var app = (function () {
     const file$n = "src/partials/Footer.svelte";
 
     function create_fragment$r(ctx) {
-    	let div3;
-    	let div2;
-    	let div0;
-    	let h1;
-    	let t1;
-    	let p0;
-    	let t3;
-    	let div1;
-    	let t4;
-    	let div9;
-    	let div8;
-    	let div4;
-    	let h20;
-    	let t6;
-    	let p1;
-    	let t8;
-    	let div5;
-    	let h21;
-    	let t10;
-    	let div6;
-    	let h22;
-    	let t12;
-    	let ul;
-    	let li0;
-    	let a0;
-    	let t14;
-    	let li1;
-    	let a1;
-    	let t16;
-    	let div7;
-    	let h23;
-    	let t18;
     	let footer;
-    	let t19;
-    	let t20_value = window.TITLE + "";
-    	let t20;
-    	let t21;
+    	let div;
+    	let t0;
+    	let t1_value = window.TITLE + "";
+    	let t1;
+    	let t2;
     	let i;
-    	let t22;
-    	let a2;
+    	let t3;
+    	let a;
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
-    			div2 = element("div");
-    			div0 = element("div");
-    			h1 = element("h1");
-    			h1.textContent = "Ready to get involved?";
-    			t1 = space();
-    			p0 = element("p");
-    			p0.textContent = "We need men and women all over the world who are fired up about the love of Jesus";
-    			t3 = space();
-    			div1 = element("div");
-    			t4 = space();
-    			div9 = element("div");
-    			div8 = element("div");
-    			div4 = element("div");
-    			h20 = element("h2");
-    			h20.textContent = "Our Mission";
-    			t6 = space();
-    			p1 = element("p");
-    			p1.textContent = "To sum up our mission… To make an Unknown God,  Known.";
-    			t8 = space();
-    			div5 = element("div");
-    			h21 = element("h2");
-    			h21.textContent = "From the Blog";
-    			t10 = space();
-    			div6 = element("div");
-    			h22 = element("h2");
-    			h22.textContent = "Subsidiaries";
-    			t12 = space();
-    			ul = element("ul");
-    			li0 = element("li");
-    			a0 = element("a");
-    			a0.textContent = "FOG TV International";
-    			t14 = space();
-    			li1 = element("li");
-    			a1 = element("a");
-    			a1.textContent = "The USA Project";
-    			t16 = space();
-    			div7 = element("div");
-    			h23 = element("h2");
-    			h23.textContent = "Our Locations";
-    			t18 = space();
     			footer = element("footer");
-    			t19 = text("Copyright ©2020 ");
-    			t20 = text(t20_value);
-    			t21 = text(" | This template is made with ");
+    			div = element("div");
+    			t0 = text("Copyright ©2020 ");
+    			t1 = text(t1_value);
+    			t2 = text(" | This template is made with ");
     			i = element("i");
-    			t22 = text(" by ");
-    			a2 = element("a");
-    			a2.textContent = "Colorlib";
-    			add_location(h1, file$n, 7, 8, 150);
-    			add_location(p0, file$n, 8, 8, 190);
-    			add_location(div0, file$n, 6, 6, 136);
-    			add_location(div1, file$n, 10, 6, 298);
-    			attr_dev(div2, "class", "wrapper flex");
-    			add_location(div2, file$n, 5, 4, 103);
-    			attr_dev(div3, "id", "contact");
-    			attr_dev(div3, "class", "gradient");
-    			add_location(div3, file$n, 4, 0, 63);
-    			add_location(h20, file$n, 18, 8, 503);
-    			add_location(p1, file$n, 19, 8, 532);
-    			add_location(div4, file$n, 17, 6, 489);
-    			add_location(h21, file$n, 22, 8, 627);
-    			add_location(div5, file$n, 21, 6, 613);
-    			add_location(h22, file$n, 32, 8, 907);
-    			attr_dev(a0, "href", "https://www.facebook.com/fogtvinternational");
-    			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$n, 34, 14, 956);
-    			add_location(li0, file$n, 34, 10, 952);
-    			attr_dev(a1, "href", "https://www.facebook.com/ProjectoUSA");
-    			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$n, 35, 14, 1070);
-    			add_location(li1, file$n, 35, 10, 1066);
-    			add_location(ul, file$n, 33, 8, 937);
-    			add_location(div6, file$n, 31, 6, 893);
-    			add_location(h23, file$n, 39, 8, 1205);
-    			add_location(div7, file$n, 38, 6, 1191);
-    			attr_dev(div8, "class", "wrapper flex");
-    			add_location(div8, file$n, 16, 4, 456);
-    			attr_dev(div9, "id", "links");
-    			add_location(div9, file$n, 15, 2, 435);
-    			attr_dev(i, "class", "fa fa-heart-o");
-    			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$n, 66, 69, 1860);
-    			attr_dev(a2, "href", "https://colorlib.com");
-    			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$n, 66, 121, 1912);
-    			add_location(footer, file$n, 65, 2, 1782);
+    			t3 = text(" by ");
+    			a = element("a");
+    			a.textContent = "Colorlib";
+    			attr_dev(i, "class", "far fa-heart");
+    			add_location(i, file$n, 6, 71, 169);
+    			attr_dev(a, "href", "https://colorlib.com");
+    			attr_dev(a, "target", "_blank");
+    			add_location(a, file$n, 6, 103, 201);
+    			attr_dev(div, "class", "wrapper");
+    			add_location(div, file$n, 5, 4, 76);
+    			add_location(footer, file$n, 4, 0, 63);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
-    			append_dev(div0, h1);
-    			append_dev(div0, t1);
-    			append_dev(div0, p0);
-    			append_dev(div2, t3);
-    			append_dev(div2, div1);
-    			insert_dev(target, t4, anchor);
-    			insert_dev(target, div9, anchor);
-    			append_dev(div9, div8);
-    			append_dev(div8, div4);
-    			append_dev(div4, h20);
-    			append_dev(div4, t6);
-    			append_dev(div4, p1);
-    			append_dev(div8, t8);
-    			append_dev(div8, div5);
-    			append_dev(div5, h21);
-    			append_dev(div8, t10);
-    			append_dev(div8, div6);
-    			append_dev(div6, h22);
-    			append_dev(div6, t12);
-    			append_dev(div6, ul);
-    			append_dev(ul, li0);
-    			append_dev(li0, a0);
-    			append_dev(ul, t14);
-    			append_dev(ul, li1);
-    			append_dev(li1, a1);
-    			append_dev(div8, t16);
-    			append_dev(div8, div7);
-    			append_dev(div7, h23);
-    			insert_dev(target, t18, anchor);
     			insert_dev(target, footer, anchor);
-    			append_dev(footer, t19);
-    			append_dev(footer, t20);
-    			append_dev(footer, t21);
-    			append_dev(footer, i);
-    			append_dev(footer, t22);
-    			append_dev(footer, a2);
+    			append_dev(footer, div);
+    			append_dev(div, t0);
+    			append_dev(div, t1);
+    			append_dev(div, t2);
+    			append_dev(div, i);
+    			append_dev(div, t3);
+    			append_dev(div, a);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(div9);
-    			if (detaching) detach_dev(t18);
     			if (detaching) detach_dev(footer);
     		}
     	};
@@ -11470,66 +11351,102 @@ var app = (function () {
     const file$2 = "src/partials/Hero.svelte";
 
     function create_fragment$2(ctx) {
-    	let div1;
-    	let video;
-    	let source;
-    	let source_src_value;
-    	let track;
-    	let t0;
+    	let div4;
+    	let div3;
     	let div0;
+    	let span;
+    	let t1;
     	let h1;
-    	let t2;
-    	let h2;
+    	let t3;
+    	let div2;
+    	let div1;
+    	let p;
+    	let t5;
+    	let input0;
+    	let t6;
+    	let input1;
+    	let t7;
+    	let input2;
+    	let t8;
+    	let button;
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
-    			video = element("video");
-    			source = element("source");
-    			track = element("track");
-    			t0 = space();
+    			div4 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
+    			span = element("span");
+    			span.textContent = "Got something you need shipped?";
+    			t1 = space();
     			h1 = element("h1");
-    			h1.textContent = "Fire of God Movement";
-    			t2 = space();
-    			h2 = element("h2");
-    			h2.textContent = "International";
-    			if (!src_url_equal(source.src, source_src_value = "../../../assets/firespark4.mp4")) attr_dev(source, "src", source_src_value);
-    			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$2, 2, 8, 113);
-    			attr_dev(track, "kind", "captions");
-    			add_location(track, file$2, 3, 8, 184);
-    			attr_dev(video, "onloadedmetadata", "this.muted=true");
-    			video.autoplay = true;
-    			video.loop = true;
-    			attr_dev(video, "preload", "auto");
-    			add_location(video, file$2, 1, 4, 33);
-    			add_location(h1, file$2, 6, 6, 237);
-    			add_location(h2, file$2, 7, 6, 273);
-    			add_location(div0, file$2, 5, 4, 225);
-    			attr_dev(div1, "id", "hero");
-    			attr_dev(div1, "class", "flex");
-    			add_location(div1, file$2, 0, 0, 0);
+    			h1.textContent = "Let us ship it for you";
+    			t3 = space();
+    			div2 = element("div");
+    			div1 = element("div");
+    			p = element("p");
+    			p.textContent = "Get a Quote";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			input1 = element("input");
+    			t7 = space();
+    			input2 = element("input");
+    			t8 = space();
+    			button = element("button");
+    			button.textContent = "Request Quote";
+    			add_location(span, file$2, 3, 6, 129);
+    			add_location(h1, file$2, 4, 6, 180);
+    			attr_dev(div0, "id", "call-to-action");
+    			attr_dev(div0, "class", "flex-1");
+    			add_location(div0, file$2, 2, 4, 82);
+    			add_location(p, file$2, 8, 8, 263);
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "placeholder", "Pickup Location");
+    			add_location(input0, file$2, 9, 8, 290);
+    			attr_dev(input1, "type", "text");
+    			attr_dev(input1, "placeholder", "Destination");
+    			add_location(input1, file$2, 10, 8, 348);
+    			attr_dev(input2, "type", "text");
+    			attr_dev(input2, "placeholder", "Estimated Distance");
+    			add_location(input2, file$2, 11, 8, 402);
+    			add_location(button, file$2, 12, 8, 463);
+    			attr_dev(div1, "id", "form");
+    			add_location(div1, file$2, 7, 6, 239);
+    			add_location(div2, file$2, 6, 4, 227);
+    			attr_dev(div3, "class", "wrapper flex flex-align flex-justify");
+    			add_location(div3, file$2, 1, 2, 27);
+    			attr_dev(div4, "id", "hero");
+    			attr_dev(div4, "class", "");
+    			add_location(div4, file$2, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, video);
-    			append_dev(video, source);
-    			append_dev(video, track);
-    			append_dev(div1, t0);
-    			append_dev(div1, div0);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
+    			append_dev(div0, span);
+    			append_dev(div0, t1);
     			append_dev(div0, h1);
-    			append_dev(div0, t2);
-    			append_dev(div0, h2);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, p);
+    			append_dev(div1, t5);
+    			append_dev(div1, input0);
+    			append_dev(div1, t6);
+    			append_dev(div1, input1);
+    			append_dev(div1, t7);
+    			append_dev(div1, input2);
+    			append_dev(div1, t8);
+    			append_dev(div1, button);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div4);
     		}
     	};
 
@@ -11577,9 +11494,29 @@ var app = (function () {
     	let hero;
     	let t0;
     	let article;
-    	let div;
+    	let div4;
+    	let div0;
+    	let h20;
+    	let t2;
+    	let p0;
+    	let t4;
+    	let div1;
+    	let h21;
+    	let t6;
+    	let p1;
+    	let t8;
+    	let div2;
+    	let h22;
+    	let t10;
+    	let p2;
+    	let t12;
+    	let div3;
+    	let h23;
+    	let t14;
+    	let p3;
+    	let t16;
     	let sveltemarkdown;
-    	let t1;
+    	let t17;
     	let button;
     	let current;
     	hero = new Hero({ $$inline: true });
@@ -11596,15 +11533,59 @@ var app = (function () {
     			create_component(hero.$$.fragment);
     			t0 = space();
     			article = element("article");
-    			div = element("div");
+    			div4 = element("div");
+    			div0 = element("div");
+    			h20 = element("h2");
+    			h20.textContent = "Commercial Solutions";
+    			t2 = space();
+    			p0 = element("p");
+    			p0.textContent = "A small business helping out other small businesses.";
+    			t4 = space();
+    			div1 = element("div");
+    			h21 = element("h2");
+    			h21.textContent = "Insured & Reliable";
+    			t6 = space();
+    			p1 = element("p");
+    			p1.textContent = "We'll take care of the logistics. Our one and only goal is to make sure your package arrives safely.";
+    			t8 = space();
+    			div2 = element("div");
+    			h22 = element("h2");
+    			h22.textContent = "Family Owned";
+    			t10 = space();
+    			p2 = element("p");
+    			p2.textContent = "Family operated since the early beginings.";
+    			t12 = space();
+    			div3 = element("div");
+    			h23 = element("h2");
+    			h23.textContent = "Community Driven";
+    			t14 = space();
+    			p3 = element("p");
+    			p3.textContent = "The success of our business depends on the success of the community.";
+    			t16 = space();
     			create_component(sveltemarkdown.$$.fragment);
-    			t1 = space();
+    			t17 = space();
     			button = element("button");
     			button.textContent = "Get Involved";
+    			add_location(h20, file$1, 14, 3, 245);
+    			add_location(p0, file$1, 15, 3, 278);
+    			attr_dev(div0, "class", "flex-1");
+    			add_location(div0, file$1, 13, 2, 221);
+    			add_location(h21, file$1, 18, 3, 373);
+    			add_location(p1, file$1, 19, 3, 404);
+    			attr_dev(div1, "class", "flex-1");
+    			add_location(div1, file$1, 17, 2, 349);
+    			add_location(h22, file$1, 22, 3, 547);
+    			add_location(p2, file$1, 23, 3, 572);
+    			attr_dev(div2, "class", "flex-1");
+    			add_location(div2, file$1, 21, 2, 523);
+    			add_location(h23, file$1, 26, 3, 657);
+    			add_location(p3, file$1, 27, 3, 686);
+    			attr_dev(div3, "class", "flex-1");
+    			add_location(div3, file$1, 25, 2, 633);
+    			attr_dev(div4, "class", "flex");
+    			add_location(div4, file$1, 12, 1, 200);
     			attr_dev(button, "class", "btn-primary active");
-    			add_location(button, file$1, 13, 2, 345);
-    			attr_dev(div, "class", "wrapper");
-    			add_location(div, file$1, 11, 1, 198);
+    			add_location(button, file$1, 32, 2, 905);
     			add_location(article, file$1, 10, 0, 187);
     		},
     		l: function claim(nodes) {
@@ -11614,10 +11595,30 @@ var app = (function () {
     			mount_component(hero, target, anchor);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, article, anchor);
-    			append_dev(article, div);
-    			mount_component(sveltemarkdown, div, null);
-    			append_dev(div, t1);
-    			append_dev(div, button);
+    			append_dev(article, div4);
+    			append_dev(div4, div0);
+    			append_dev(div0, h20);
+    			append_dev(div0, t2);
+    			append_dev(div0, p0);
+    			append_dev(div4, t4);
+    			append_dev(div4, div1);
+    			append_dev(div1, h21);
+    			append_dev(div1, t6);
+    			append_dev(div1, p1);
+    			append_dev(div4, t8);
+    			append_dev(div4, div2);
+    			append_dev(div2, h22);
+    			append_dev(div2, t10);
+    			append_dev(div2, p2);
+    			append_dev(div4, t12);
+    			append_dev(div4, div3);
+    			append_dev(div3, h23);
+    			append_dev(div3, t14);
+    			append_dev(div3, p3);
+    			append_dev(article, t16);
+    			mount_component(sveltemarkdown, article, null);
+    			append_dev(article, t17);
+    			append_dev(article, button);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {

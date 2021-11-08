@@ -1,10 +1,17 @@
-<div id="hero" class="flex">
-    <video onloadedmetadata="this.muted=true" autoplay loop preload="auto">
-        <source src="../../../assets/firespark4.mp4" type="video/mp4">
-        <track kind="captions">
-    </video>
-    <div>
-      <h1>Fire of God Movement</h1>
-      <h2>International</h2>
+<div id="hero" class="">
+  <div class="wrapper flex flex-align flex-justify">
+    <div id="call-to-action" class="flex-1">
+      <span>Got something you need shipped?</span>
+      <h1>Let us ship it for you</h1>
     </div>
+    <div>
+      <div id="form">
+        <p>Get a Quote</p>
+        <input type="text" placeholder="Pickup Location">
+        <input type="text" placeholder="Destination">
+        <input type="text" placeholder="Estimated Distance">
+        <button>Request Quote</button>
+      </div>
+    </div>
+  </div>
 </div>
