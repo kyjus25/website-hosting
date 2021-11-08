@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -2179,19 +2179,19 @@ var app = (function () {
 
     // (8:8) <Link to="/">
     function create_default_slot$2(ctx) {
-    	let i;
+    	let t_value = window.TITLE + "";
+    	let t;
 
     	const block = {
     		c: function create() {
-    			i = element("i");
-    			attr_dev(i, "class", "fas fa-cross");
-    			add_location(i, file$o, 8, 10, 157);
+    			t = text(t_value);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
+    			insert_dev(target, t, anchor);
     		},
+    		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
@@ -2263,20 +2263,20 @@ var app = (function () {
     			attr_dev(div0, "id", "logo");
     			add_location(div0, file$o, 6, 6, 109);
     			attr_dev(a0, "href", "#schedule");
-    			add_location(a0, file$o, 13, 14, 270);
-    			add_location(li0, file$o, 13, 10, 266);
+    			add_location(a0, file$o, 13, 14, 256);
+    			add_location(li0, file$o, 13, 10, 252);
     			attr_dev(a1, "href", "#about");
-    			add_location(a1, file$o, 14, 14, 322);
-    			add_location(li1, file$o, 14, 10, 318);
+    			add_location(a1, file$o, 14, 14, 308);
+    			add_location(li1, file$o, 14, 10, 304);
     			attr_dev(a2, "href", "#blog");
-    			add_location(a2, file$o, 15, 14, 368);
-    			add_location(li2, file$o, 15, 10, 364);
+    			add_location(a2, file$o, 15, 14, 354);
+    			add_location(li2, file$o, 15, 10, 350);
     			attr_dev(a3, "href", "#contact");
-    			add_location(a3, file$o, 16, 14, 412);
-    			add_location(li3, file$o, 16, 10, 408);
-    			add_location(ul, file$o, 12, 8, 251);
+    			add_location(a3, file$o, 16, 14, 398);
+    			add_location(li3, file$o, 16, 10, 394);
+    			add_location(ul, file$o, 12, 8, 237);
     			attr_dev(div1, "id", "navigation");
-    			add_location(div1, file$o, 11, 6, 221);
+    			add_location(div1, file$o, 11, 6, 207);
     			attr_dev(div2, "class", "wrapper flex");
     			add_location(div2, file$o, 5, 4, 76);
     			add_location(header, file$o, 4, 0, 63);
@@ -11577,7 +11577,6 @@ var app = (function () {
     	let hero;
     	let t0;
     	let article;
-    	let div;
     	let sveltemarkdown;
     	let t1;
     	let button;
@@ -11596,15 +11595,12 @@ var app = (function () {
     			create_component(hero.$$.fragment);
     			t0 = space();
     			article = element("article");
-    			div = element("div");
     			create_component(sveltemarkdown.$$.fragment);
     			t1 = space();
     			button = element("button");
     			button.textContent = "Get Involved";
     			attr_dev(button, "class", "btn-primary active");
-    			add_location(button, file$1, 13, 2, 345);
-    			attr_dev(div, "class", "wrapper");
-    			add_location(div, file$1, 11, 1, 198);
+    			add_location(button, file$1, 12, 1, 320);
     			add_location(article, file$1, 10, 0, 187);
     		},
     		l: function claim(nodes) {
@@ -11614,10 +11610,9 @@ var app = (function () {
     			mount_component(hero, target, anchor);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, article, anchor);
-    			append_dev(article, div);
-    			mount_component(sveltemarkdown, div, null);
-    			append_dev(div, t1);
-    			append_dev(div, button);
+    			mount_component(sveltemarkdown, article, null);
+    			append_dev(article, t1);
+    			append_dev(article, button);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {

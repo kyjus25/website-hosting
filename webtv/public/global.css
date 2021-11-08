@@ -1,0 +1,30 @@
+/* Globals */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+    --color-primary: #15B881;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+body, body * { box-sizing: border-box; }
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex { display: flex; }
+
+.flex-1 { flex: 1; }
+
+.flex-2 { flex: 2; }
+
+.flex-align { align-items: center; }
+
+.flex-justify { justify-content: center; }
