@@ -11,8 +11,8 @@
 	let loading = true;
 
 	async function fetchData() {
-		pages = await fetch(`${window.BASE_URL}/pages`).then(response => response.json()).then(response => response.filter(i => i.website === 'cceds'));
-		posts = await fetch(`${window.BASE_URL}/posts`).then(response => response.json()).then(response => response.filter(i => i.website === 'cceds'));
+		pages = await fetch(`${window.BASE_URL}/pages`).then(response => response.json()).then(response => response.filter(i => i.website === 'webtv'));
+		posts = await fetch(`${window.BASE_URL}/posts`).then(response => response.json()).then(response => response.filter(i => i.website === 'webtv'));
 		loading = false;
 	}
 

@@ -12103,8 +12103,8 @@ var app = (function () {
     	let loading = true;
 
     	async function fetchData() {
-    		$$invalidate(0, pages = await fetch(`${window.BASE_URL}/pages`).then(response => response.json()).then(response => response.filter(i => i.website === 'cceds')));
-    		posts = await fetch(`${window.BASE_URL}/posts`).then(response => response.json()).then(response => response.filter(i => i.website === 'cceds'));
+    		$$invalidate(0, pages = await fetch(`${window.BASE_URL}/pages`).then(response => response.json()).then(response => response.filter(i => i.website === 'webtv')));
+    		posts = await fetch(`${window.BASE_URL}/posts`).then(response => response.json()).then(response => response.filter(i => i.website === 'webtv'));
     		$$invalidate(1, loading = false);
     	}
 
