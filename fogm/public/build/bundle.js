@@ -3368,12 +3368,11 @@ var app = (function () {
     			add_location(div8, file$o, 16, 4, 456);
     			attr_dev(div9, "id", "links");
     			add_location(div9, file$o, 15, 2, 435);
-    			attr_dev(i, "class", "fa fa-heart-o");
-    			attr_dev(i, "aria-hidden", "true");
+    			attr_dev(i, "class", "far fa-heart");
     			add_location(i, file$o, 66, 69, 1860);
     			attr_dev(a2, "href", "https://colorlib.com");
     			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$o, 66, 121, 1912);
+    			add_location(a2, file$o, 66, 101, 1892);
     			add_location(footer, file$o, 65, 2, 1782);
     		},
     		l: function claim(nodes) {

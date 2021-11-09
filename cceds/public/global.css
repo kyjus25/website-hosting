@@ -11,6 +11,10 @@ a {
     color: black;
 }
 
+h1 {
+    text-align: center;
+}
+
 button {
     background: transparent;
     border: none;
@@ -202,6 +206,56 @@ header #navigation li {
     font-size: 1.5em;
 }
 
+/* Home Blocks */
+
+#blocks > div {
+    text-align: center;
+    padding: 5em 3em;
+}
+
+#blocks > div i {
+    color: var(--color-primary);
+    font-size: 3em;
+}
+
+/* Home Image */
+
+#home-image {
+    position: relative;
+    margin-left: -200px;
+    background: url('./assets/hero.jpg');
+    width: calc(100% + 2000px);
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+}
+
+#home-image + div h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#home-image + div {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#home-image + div h1 {
+    text-align: left;
+}
+
+/* Shippables */
+
+.shippables {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.shippables i {
+    font-size: 3em;
+    color: var(--color-primary);
+}
+
 /* Footer */
 
 footer,
@@ -211,6 +265,6 @@ footer,
     padding: 1em 0;
 }
 
-footer a {
-    color: var(--color-primary);
-}
+footer { text-align: center; }
+
+footer a { color: var(--color-primary); }
