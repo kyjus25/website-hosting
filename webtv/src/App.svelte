@@ -2,6 +2,8 @@
 	import { Router, Link, Route } from "svelte-routing";
 	import Header from './partials/Header.svelte';
 	import Footer from './partials/Footer.svelte';
+	import Sidebar from './partials/Sidebar.svelte';
+	import Contact from './pages/Contact.svelte';
 	import Page from './pages/Page.svelte';
 	import Home from './pages/Home.svelte';
 	import { onMount } from "svelte";
@@ -27,13 +29,19 @@
 			<div class="loader">Loading...</div>
 		</div>
 	{:else}
-		<Header/>
-		<Route path="/pages/:id" let:params>
-			<Page pages={pages} {...params} />
-		</Route>
-		<Route path="/"><Home pages={pages} /></Route>
-		<Footer />
+		<div class="wrapper">
+			<Header/>
+			<div id="content" class="flex">
+				<Sidebar/>
+				<Route path="/pages/contact"><Contact/></Route>
+				<Route path="/pages/:id" let:params>
+					<Page pages={pages} {...params} />
+				</Route>
+				<Route path="/"><Home pages={pages} /></Route>
+			</div>
+		</div>
+		<div class="wrapper">
+			<Footer />
+		</div>
 	{/if}
 </Router>
-
-<!-- https://preview.colorlib.com/theme/thelogistico -->

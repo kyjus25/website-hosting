@@ -6,9 +6,10 @@
 	export let pages = [];
 </script>
 
-<Hero />
+
 
 <article>
+	<Hero />
 	<SvelteMarkdown source={pages.find(i => i.title.toLowerCase().replace(new RegExp(" ", "g"), '-') === 'home').content} />
 	<button class="btn-primary active">Get Involved</button>
 </article>
