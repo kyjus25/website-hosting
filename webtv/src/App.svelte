@@ -4,6 +4,7 @@
 	import Footer from './partials/Footer.svelte';
 	import Sidebar from './partials/Sidebar.svelte';
 	import Contact from './pages/Contact.svelte';
+	import Live from './pages/Live.svelte';
 	import Page from './pages/Page.svelte';
 	import Home from './pages/Home.svelte';
 	import { onMount } from "svelte";
@@ -34,6 +35,7 @@
 			<div id="content" class="flex">
 				<Sidebar/>
 				<Route path="/pages/contact"><Contact/></Route>
+				<Route path="/pages/live"><Live/></Route>
 				<Route path="/pages/:id" let:params>
 					<Page pages={pages} {...params} />
 				</Route>
