@@ -22,6 +22,29 @@ services:
     command: "npm run dev"
     expose:
       - 5000
+  webtv:
+    image: node:lts-alpine
+    working_dir: /home/node/app
+    volumes:
+      - ./webtv:/home/node/app
+    restart: always
+    environment:
+      VIRTUAL_HOST: webtv.international
+      LETSENCRYPT_HOST: webtv.international
+    command: "npm run dev"
+    expose:
+      - 5000
+  live:
+    image: alqutami/rtmp-hls
+    restart: always
+    environment:
+      VIRTUAL_HOST: live.webtv.international
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: live.webtv.international
+    expose:
+      - 8080
+    ports:
+      - "1935:1935"
 networks:
   default:
     external:
