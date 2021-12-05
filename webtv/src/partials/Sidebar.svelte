@@ -9,4 +9,4 @@
         <li><Link to="/pages/contact"><i class="fas fa-envelope"/>Contact</Link></li>
         <li><Link to="/pages/mission"><i class="fas fa-flag-checkered"/> Our Mission</Link></li>
     </ul>
-</aside>xxxsxcfvvgtre
+</aside>
