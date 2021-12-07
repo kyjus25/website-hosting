@@ -6,7 +6,12 @@
     <div class="flex">
       <div id="logo" class="flex-1">
         <Link to="/">
-          <img alt="{window.TITLE}" src="/assets/WebTv logo.png">
+          <img alt="{window.TITLE}" src="/assets/<div class="flex">
+            <div id="logo" class="flex-1">
+              <Link to="/">
+                <img alt="{window.TITLE}" src="/assets/Led.png">
+              </Link>
+            </div>">
         </Link>
       </div>
 
