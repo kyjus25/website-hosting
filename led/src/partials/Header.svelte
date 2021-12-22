@@ -9,7 +9,7 @@
           <img alt="{window.TITLE}" src="/assets/<div class="flex">
             <div id="logo" class="flex-1">
               <Link to="/">
-                <img alt="{window.TITLE}" src="led/public/assets/Led.png">
+                <img alt="{window.TITLE}" src="/home/mipps/Documents/website projects/website-hosting/led/public/assets/led.png">
               </Link>
             </div>">
         </Link>
