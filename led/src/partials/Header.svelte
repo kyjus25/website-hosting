@@ -7,7 +7,7 @@
       <div id="logo" class="flex-1">
         <Link to="/">
           <img alt="{window.TITLE}" src="/assets/led.png">
-            <div id="logo" class="flex-1">
+            <div id="logo" class="flex-2">
               <Link to="/">
                 <img alt="{window.TITLE}" src="/home/mipps/Documents/website projects/website-hosting/led/public/assets/led.png">
               </Link>
