@@ -1,11 +1,23 @@
 <script>
     import App from "$lib/components/App.svelte";
-    import Header from "$lib/components/Header.svelte";
+    import Header from "../components/Header.svelte";
+    import Footer from "../components/Footer.svelte";
+
+    import { fetchData, loading } from "$lib/stores/data.js";
+
+    fetchData("fogm");
 </script>
 
 <App>
-    <Header />
-    <article class="container">
+    {#if $loading}
+        Loading...
+    {:else}
+        <Header />
         <slot />
-    </article>
+        <Footer />
+    {/if}
 </App>
+
+<style>
+    @import "../components/fogm.css";
+</style>
