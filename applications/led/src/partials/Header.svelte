@@ -1,34 +1,73 @@
-<script>
-    import { Link } from "svelte-routing";
-</script>
-
-<header>
-    <div class="flex">
-      <div id="logo" class="flex-1">
-        <Link to="/">
-          <img alt="{window.TITLE}" src="/assets/led.png">
-            <div id="logo" class="flex-1">
-              <Link to="/">
-                <img alt="{window.TITLE}" src="/home/mipps/Documents/website projects/website-hosting/led/public/assets/led.png">
-              </Link>
-            </div>">
-        </Link>
-      </div>
-
-      <div>
-        <input placeholder="Seach for a video or post..." type="text" value="" name="s" id="s">
-      </div>
-      
-    </div>
-  </header>
-
-  <ul id="navigation">
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/pages/news">News</Link></li>
-    <li><Link to="/pages/live">Live</Link></li>
-    <li><Link to="/pages/donate">Dontate</Link></li>
-    <li><Link to="/pages/contact">Contact</Link></li>
-  </ul>
 
 
+main {
+	margin: 100px 0;
+}
+header, footer {
+	color: white;
+}	
+/* HEADER */
+header {
+	font-weight: 100;
+}
+header #logo-text, header i {
+	display: inline-block;
+	vertical-align: top;
+}	
+header i {
+	font-size: 65px !important;
+	margin-right: 10px;
+}
+header p {
+	margin-top: 5px;
+}
+header h1 {
+	font-size: 40px;
+	font-weight: 100;
+}
+header img {
+	height: 200px;
+}
+header span {
+	font-weight: bold;
+}
+.menu li {
+	display: inline-block;
+}
+.menu a {
+	display: block;
+	color: white;
+	padding: 15px 20px;
+	text-transform: uppercase;
+}	
+.menu .current_page_item a {
+	background-color: white;
+	color: black;
+}
+	
+/* BODY */
+.theme-default .nivo-controlNav {
+	text-align: right !important;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+.nivo-control {
+	background: white !important;
+	width: auto !important;
+	height: auto !important;
+	text-indent: 0 !important;
+	padding: 5px 20px;
+}
+.post-block .cropped {
+	height: 200px;
+    background-size: cover;
+    background-position: center center;
+}
+.post-block {
+	background-color: white;
+	padding: 20px;
+	margin-top: 10px;
+}
+/* FOOTER */
   
