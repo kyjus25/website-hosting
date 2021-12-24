@@ -5,7 +5,7 @@
 
     import { fetchData, loading } from "$lib/stores/data.js";
 
-    fetchData("cceds");
+    fetchData("led");
 </script>
 
 <App>
@@ -17,7 +17,3 @@
         <Footer />
     {/if}
 </App>
-
-<style>
-    @import "../components/cceds.css";
-</style>

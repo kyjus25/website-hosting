@@ -15,10 +15,10 @@
 
   <ul id="navigation">
     <li><a href="/">Home</a></li>
-    <li><a href="/pages/news">News</a></li>
-    <li><a href="/pages/live">Live</a></li>
-    <li><a href="/pages/donate">Dontate</a></li>
-    <li><a href="/pages/contact">Contact</a></li>
+    <li><a href="/news">News</a></li>
+    <li><a href="/live">Live</a></li>
+    <li><a href="/donate">Dontate</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 
 

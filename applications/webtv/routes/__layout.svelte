@@ -6,7 +6,7 @@
 
     import { fetchData, loading } from "$lib/stores/data.js";
 
-    fetchData("fogm");
+    fetchData("webtv");
 </script>
 
 <App>
