@@ -12,8 +12,10 @@
     {#if $loading}
         Loading...
     {:else}
-        <Header />
-        <slot />
-        <Footer />
+        <div class="container mx-auto">
+            <Header />
+            <slot />
+            <Footer />
+        </div>
     {/if}
 </App>
