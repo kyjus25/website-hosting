@@ -1,13 +1,9 @@
-<script>
-    import { Link } from "svelte-routing";
-</script>
-
 <header>
     <div class="flex flex-align">
       <div id="logo">
-        <Link to="/">
-          {window.TITLE}
-        </Link>
+        <a href="/">
+          Coles County Express Delivery Services
+        </a>
       </div>
       <div id="navigation" class="flex-1">
         <ul>

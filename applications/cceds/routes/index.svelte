@@ -1,9 +1,7 @@
 <script>
-	import { Link } from "svelte-routing";
-	import SvelteMarkdown from 'svelte-markdown';
-	import Hero from "../partials/Hero.svelte";
-
-	export let pages = [];
+    import { pages } from "$lib/stores/data.js";
+    import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
+    import Hero from '../components/Hero.svelte';
 </script>
 
 <Hero />
@@ -38,7 +36,7 @@
 			<div id="home-image"></div>
 			<div>
 				<h1>About Us</h1>
-				<SvelteMarkdown source={pages.find(i => i.title.toLowerCase().replace(new RegExp(" ", "g"), '-') === 'home').content} />
+				<SvelteMarkdown source={$pages.find(i => i.title.toLowerCase().replace(new RegExp(" ", "g"), '-') === 'home').content} />
 				<button class="btn-primary active">Contact Us</button>
 			</div>
 		</div>
@@ -77,4 +75,3 @@
 	</div>
 		
 </article>
-
