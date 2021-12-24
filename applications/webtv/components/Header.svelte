@@ -1,0 +1,25 @@
+<header>
+    <div class="flex">
+      <div id="logo" class="flex-1">
+        <a href="/">
+          <img alt="WebTV Logo" src="/webtv/WebTv logo.png">
+        </a>
+      </div>
+
+      <div>
+        <input placeholder="Seach for a video or post..." type="text" value="" name="s" id="s">
+      </div>
+      
+    </div>
+  </header>
+
+  <ul id="navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="/pages/news">News</a></li>
+    <li><a href="/pages/live">Live</a></li>
+    <li><a href="/pages/donate">Dontate</a></li>
+    <li><a href="/pages/contact">Contact</a></li>
+  </ul>
+
+
+  
