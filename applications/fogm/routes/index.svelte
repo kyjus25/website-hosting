@@ -1,6 +1,6 @@
 <script>
     import { pages } from "$lib/stores/data.js";
-    import SvelteMarkdown from "svelte-markdown";
+    import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
     import Hero from "../components/Hero.svelte";
 </script>
 

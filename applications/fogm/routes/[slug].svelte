@@ -1,21 +1,22 @@
 <script>
-    // import SvelteMarkdown from "svelte-markdown";
+    import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
     import Gradient from "../components/Gradient.svelte";
-    // let content = null;
-    // $: content = pages.find(
-    //     (i) => i.title.toLowerCase().replace(new RegExp(" ", "g"), "-") === id
-    // )?.content;
+    import { pages } from "$lib/stores/data.js";
+    import { page } from '$app/stores'
+    let content = null;
+    $: content = $pages.find(
+        (i) => i.title.toLowerCase().replace(new RegExp(" ", "g"), "-") === $page.params.slug
+    )?.content;
 </script>
 
 <Gradient />
 
-<!-- <article>
+<article>
     <div class="wrapper">
-        content
         {#if content}
             <SvelteMarkdown source={content} />
         {:else}
             <h1>404</h1>
         {/if}
     </div>
-</article> -->
+</article>
