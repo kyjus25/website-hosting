@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'roboto': ['"Roboto"', 'sans-serif'],
+      },
+      backgroundImage: {
+        'led': "url('/led/led-pic-bg.jpg')"
       }
     }
   },

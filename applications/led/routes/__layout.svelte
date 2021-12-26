@@ -14,7 +14,9 @@
     {:else}
         <div class="container mx-auto">
             <Header />
-            <slot />
+            <article class="bg-black/30 text-white p-3">
+                <slot />
+            </article>
             <Footer />
         </div>
     {/if}
