@@ -3,36 +3,47 @@
     import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
 </script>
 
-<div class="w-full carousel">
+<div class="w-full carousel mb-3">
     <div id="slide1" class="relative w-full carousel-item">
-      <img src="https://picsum.photos/id/500/800/300" class="w-full"> 
+      <img src="https://picsum.photos/id/500/800/300" class="w-full" alt="led logo"> 
       <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide4" class="btn btn-circle">❮</a> 
         <a href="#slide2" class="btn btn-circle">❯</a>
       </div>
     </div> 
     <div id="slide2" class="relative w-full carousel-item">
-      <img src="https://picsum.photos/id/501/800/300" class="w-full"> 
+      <img src="https://picsum.photos/id/501/800/300" class="w-full"alt="led logo"> 
       <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide1" class="btn btn-circle">❮</a> 
         <a href="#slide3" class="btn btn-circle">❯</a>
       </div>
     </div> 
     <div id="slide3" class="relative w-full carousel-item">
-      <img src="https://picsum.photos/id/502/800/300" class="w-full"> 
+      <img src="https://picsum.photos/id/502/800/300" class="w-full"alt="led logo"> 
       <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide2" class="btn btn-circle">❮</a> 
         <a href="#slide4" class="btn btn-circle">❯</a>
       </div>
     </div> 
     <div id="slide4" class="relative w-full carousel-item">
-      <img src="https://picsum.photos/id/503/800/300" class="w-full"> 
+      <img src="https://picsum.photos/id/503/800/300" class="w-full"alt="led logo"> 
       <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide3" class="btn btn-circle">❮</a> 
         <a href="#slide1" class="btn btn-circle">❯</a>
       </div>
     </div>
   </div>
-  
-	
-	This is the home page
+
+  <div class="flex">
+    <div class="flex-1">
+      <h2 class="uppercase bg-transparent text-white font-thin text-3xl">Our <span class="font-bold">Portfolio</span></h2>
+    </div>
+    <div class="flex-1">
+      <h2 class="uppercase bg-transparent text-white font-thin text-3xl">Photo <span class="font-bold">Gallery</span></h2>
+      <h2 class="uppercase bg-transparent text-white font-thin text-3xl">Latest <span class="font-bold">Video</span></h2>
+      <h2 class="uppercase bg-transparent text-white font-thin text-3xl">Latest <span class="font-bold">Events</span></h2>
+    </div>
+  </div>
+    
+    
+     
