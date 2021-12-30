@@ -41,8 +41,8 @@ services:
       - ./:/home/node/app
     restart: always
     environment:
-      VIRTUAL_HOST: led-lightingentertainmentdesign.com/
-      LETSENCRYPT_HOST: led-lightingentertainmentdesign.com/
+      VIRTUAL_HOST: led-lightingentertainmentdesign.com
+      LETSENCRYPT_HOST: led-lightingentertainmentdesign.com
     command: sh -c "npm i && npm run led"
     expose:
       - 3000
