@@ -7,10 +7,14 @@
     "led": "cd applications/led && svelte-kit dev",
     "route66": "cd applications/route66 && svelte-kit dev",
     "cceds": "cd applications/cceds && svelte-kit dev",
-    "build": "svelte-kit build"
+    "build-fogm": "cd applications/fogm && svelte-kit build",
+    "build-webtv": "cd applications/webtv && svelte-kit build",
+    "build-led": "cd applications/led && svelte-kit build",
+    "build-route66": "cd applications/route66 && svelte-kit build",
+    "build-cceds": "cd applications/cceds && svelte-kit build"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.0",
     "daisyui": "^1.19.0",

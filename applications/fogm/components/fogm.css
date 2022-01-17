@@ -10,6 +10,11 @@ body {
     color: white;
     overflow-x: hidden;
   }
+
+  .btn-primary.btn-active, .btn-primary:hover {
+    border-left: 2px solid #e16521;
+    border-right: 2px solid #e4381C;
+}
   
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -70,13 +75,8 @@ body {
   }
   
   #hero video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 150%;
+    min-height: 150%;
     width: auto;
     height: auto;
     z-index: -1000;

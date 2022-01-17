@@ -17,9 +17,9 @@ services:
       - ./:/home/node/app
     restart: always
     environment:
-      VIRTUAL_HOST: develop.fireofgodmovementinternational.com
-      LETSENCRYPT_HOST: develop.fireofgodmovementinternational.com
-    command: sh -c "npm i && npm run fogm"
+      VIRTUAL_HOST: fireofgodmovementinternational.com
+      LETSENCRYPT_HOST: fireofgodmovementinternational.com
+    command: sh -c "npm i && npm run build-fogm; node ./applications/fogm/build/index.js"
     expose:
       - 3000
   webtv:
@@ -31,7 +31,7 @@ services:
     environment:
       VIRTUAL_HOST: webtv.international
       LETSENCRYPT_HOST: webtv.international
-    command: sh -c "npm i && npm run webtv"
+    command: sh -c "npm i && npm run build-webtv; node ./applications/webtv/build/index.js"
     expose:
       - 3000
   led:
@@ -43,7 +43,7 @@ services:
     environment:
       VIRTUAL_HOST: led-lightingentertainmentdesign.com
       LETSENCRYPT_HOST: led-lightingentertainmentdesign.com
-    command: sh -c "npm i && npm run led"
+    command: sh -c "npm i && npm run build-led; node ./applications/led/build/index.js"
     expose:
       - 3000
   live:

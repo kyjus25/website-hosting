@@ -71,7 +71,7 @@
   </div>
 </div>
 <footer>
-  Copyright &copy;2020 Fire of God Movement International | This template is
+  Copyright &copy;2021 Fire of God Movement International | This template is
   made with <i class="far fa-heart" /> by
   <a href="https://colorlib.com" target="_blank">Colorlib</a>
 </footer>

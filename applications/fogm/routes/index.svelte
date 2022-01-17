@@ -17,7 +17,9 @@
                 Tune in daily to watch live sermons or scroll through our many
                 past sermons archived
             </p>
-            <button class="btn-primary">Watch Now</button>
+            <a href="./live-feed">
+                <button class="btn-primary">Watch Now</button>
+            </a>
         </div>
     </div>
     <div class="box flex overlay" style="background-image: url(/fogm/dvd.jpg)">
@@ -27,7 +29,9 @@
                 We offer 3 DVDs available in either English or Portuguese,
                 presented by Pastor David White
             </p>
-            <button class="btn-primary">Order Now</button>
+            <a href="./order">
+                <button class="btn-primary">Order Now</button>
+            </a>
         </div>
     </div>
     <div
@@ -40,7 +44,9 @@
                 Spreading the message, truth, and teachings of The Unknown God
                 throughout the globe
             </p>
-            <button class="btn-primary">Get Involved</button>
+            <a href="./contact-us"
+                ><button class="btn-primary">Get Involved</button></a
+            >
         </div>
     </div>
 </div>
