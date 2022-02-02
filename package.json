@@ -2,15 +2,25 @@
   "name": "website-hosting",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview"
+    "fogm": "cd applications/fogm && svelte-kit dev",
+    "webtv": "cd applications/webtv && svelte-kit dev",
+    "led": "cd applications/led && svelte-kit dev",
+    "route66": "cd applications/route66 && svelte-kit dev",
+    "cceds": "cd applications/cceds && svelte-kit dev",
+    "build-fogm": "cd applications/fogm && svelte-kit build",
+    "build-webtv": "cd applications/webtv && svelte-kit build",
+    "build-led": "cd applications/led && svelte-kit build",
+    "build-route66": "cd applications/route66 && svelte-kit build",
+    "build-cceds": "cd applications/cceds && svelte-kit build"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
-  },
-  "type": "module"
+    "autoprefixer": "^10.4.2",
+    "daisyui": "^1.19.0",
+    "postcss": "^8.4.5",
+    "svelte": "^3.46.1",
+    "svelte-markdown": "^0.2.0",
+    "tailwindcss": "^3.0.15"
+  }
 }
