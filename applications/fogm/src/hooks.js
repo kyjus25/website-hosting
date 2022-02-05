@@ -17,7 +17,7 @@ export async function handle({ event, resolve }) {
 		return i;
 	});
 
-	event.locals = {pages, posts, menu};
+	event.locals = {baseUrl, site, pages, posts, menu};
 
 	const response = await resolve(event);
 	return response;

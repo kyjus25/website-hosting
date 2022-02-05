@@ -1,12 +1,6 @@
 <script>
   import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
   import { session } from '$app/stores';
-  import { page } from '$app/stores';
-
-  let content = null;
-    $: content = $session.pages.find(i => i.slug === 'usa-project-charleston-il')?.content;
-    console.log('Pages', $session.pages);
-
 </script>
 
 <div class="w-full carousel mb-3 opacity-80">
@@ -52,4 +46,4 @@
   </div>
 </div>
 
-<SvelteMarkdown source={content} />
+<SvelteMarkdown source={$session.pages.find(i => i.slug === 'usa-project-charleston-il')?.content} />

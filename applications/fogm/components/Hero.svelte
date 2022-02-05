@@ -1,10 +1,8 @@
-<div id="hero" class="flex">
-  <video onloadedmetadata="this.muted=true" autoplay loop preload="auto">
-    <source src="/fogm/firespark4.mp4" type="video/mp4" />
-    <track kind="captions" />
-  </video>
-  <div>
-    <h1>Fire of God Movement</h1>
-    <h2>International</h2>
-  </div>
-</div>
+<script>
+  import { session } from '$app/stores';
+</script>
+
+<video id="hero" onloadedmetadata="this.muted=true" autoplay loop preload="auto">
+  <source src={`${$session.baseUrl}/uploads/2firespark4_a490727ca6.mp4`} type="video/mp4" />
+  <track kind="captions" />
+</video>
