@@ -9,7 +9,7 @@
         <h1>Contact Us</h1>
         <p>
             Send us an email at <a href="mailto:FireOfGodMinistries3@gmail.com"
-                >FireOfGodMinistries3@gmail.com</a
+                >FireOfGodMovementinternational@gmail.com</a
             >
         </p>
     </div>

@@ -1,5 +1,5 @@
 <script>
-    import { pages } from "$lib/stores/data.js";
+    import { session } from '$app/stores';
     import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
     import Hero from "../components/Hero.svelte";
 </script>
@@ -52,13 +52,7 @@
 </div>
 <article>
     <div class="wrapper">
-        <SvelteMarkdown
-            source={$pages.find(
-                (i) =>
-                    i.title.toLowerCase().replace(new RegExp(" ", "g"), "-") ===
-                    "home"
-            ).content}
-        />
+        <SvelteMarkdown source={$session.pages.find(i => i.slug === "home").content}/>
         <button class="btn-primary active">Get Involved</button>
     </div>
 </article>

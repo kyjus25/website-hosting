@@ -67,17 +67,9 @@ body {
     content: '';
     background-color: rgba(0,0,0,0.6);
   }
-  
+
   #hero {
-    position: relative;
-    height: 120vh;
-    overflow: hidden;
-  }
-  
-  #hero video {
-    min-width: 150%;
-    min-height: 150%;
-    width: auto;
+    width: 100%;
     height: auto;
     z-index: -1000;
     overflow: hidden;
@@ -93,22 +85,6 @@ body {
     background: -webkit-linear-gradient(top, rgba(21,21,21,1) 0%,rgba(21,21,21,0.77) 23%,rgba(21,21,21,0) 100%);
     background: linear-gradient(to bottom, rgba(21,21,21,1) 0%,rgba(21,21,21,0.77) 23%,rgba(21,21,21,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#151515', endColorstr='#00151515',GradientType=0 );
-  }
-  
-  #hero div {
-    text-align: center;
-  }
-  
-  #hero div h1 {
-    font-size: 6vw;
-    line-height: 6vw;
-    margin: 0;
-  }
-  
-  #hero div h2 {
-    font-size: 5vw;
-    line-height: 5vw;
-    margin: 0;
   }
   
   #social {

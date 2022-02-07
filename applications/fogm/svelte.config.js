@@ -4,7 +4,9 @@ import adapter from '@sveltejs/adapter-node';
 const config = {
 	kit: {
 		adapter: adapter(),
-		target: '#svelte',
+		prerender: {
+			enabled: false
+		},
 		vite: {
 			server: {
 				fs: {

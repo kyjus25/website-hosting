@@ -1,3 +1,8 @@
+<script>
+  import SvelteMarkdown from "svelte-markdown/src/SvelteMarkdown.svelte";
+  import { session } from '$app/stores';
+</script>
+
 <header>
   <div class="wrapper flex">
     <div id="logo">
@@ -6,43 +11,8 @@
       </a>
     </div>
     <div id="navigation">
-      <ul>
-        <li>
-          <a href="/the-fathers-house">The Father's House</a>
-          <ul>
-            <li>
-              <a href="/brazil-ministry">Brazil Ministry</a>
-              <ul>
-                <li>
-                  <a href="/jump-start-english">Jump Start English</a>
-                </li>
-                <li>
-                  <a href="/jump-start-spanish">Jump Start Spanish</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="/usa-ministry">USA Ministry</a></li>
-            <li><a href="/jerusalem-ministry">Jerusalem Ministry</a></li>
-            <li><a href="/kenya-ministry">Kenya Ministry</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/the-unknown-god">The Unknown God</a>
-          <ul>
-            <li><a href="/prison-ministry">Prison Ministry</a></li>
-            <li><a href="/teen-challenge">Teen Challenge</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/sermons">Sermons</a>
-          <ul>
-            <li><a href="/live-feed">Live Feed</a></li>
-            <li><a href="/study-words">Study Words</a></li>
-          </ul>
-        </li>
-        <li><a href="/mission-statement">Mission Statement</a></li>
-        <li><a href="/contact-us">Contact US</a></li>
-      </ul>
+      <SvelteMarkdown source={$session.menu.content} />
+     
     </div>
     <div id="social">
       <a href="https://www.facebook.com/fogtvinternational" target="_blank">
