@@ -36,7 +36,7 @@
     </div>
     <div
         class="box flex overlay"
-        style="background-image: url(/fogm/reaching_out.jpg)"
+        style="background-image: url(/fogm/kenya.jpg)"
     >
         <div>
             <h1>Reaching Out</h1>
