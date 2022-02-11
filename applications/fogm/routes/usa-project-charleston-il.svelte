@@ -90,10 +90,20 @@
 <div id="img3"> 
   <img src="/fogm/fire-pit.png">
 
- <div id="about"class="wrapper">
+ <div id="learning-scrypt">
+ <di class="campground-pic">
   <img src="/fogm/camp.jpg"align="right"pt-3 alt="camp" width="200"height="200">
     <div class="flex">
 
     </div>
   </div>
 </div>
+<div> proper way to make paragraph= <br> for break 
+      or we can do a <p> for paragraph at the start and a close = <p> the new line and <b> for bold</b>> and <i> for italised</i> and  <u>u for underline</u></p>
+      <h2>this is a heading by using h2 and this is a !Document type html> This starts the decluration of what the page is before any header</h2>
+      <p> this. is a hyppertype link to a web page and link to page such as <a href="https://www.msn.com/">"msn"</a>.</p>
+       <p>This is an internel website page link <a href="page-name.html">page-name</a></p>
+       <center>
+       <p>a simple imge<img width="100" height="100" src="/fogm/camp.jpg"></p>
+       </center>
+      </div>
