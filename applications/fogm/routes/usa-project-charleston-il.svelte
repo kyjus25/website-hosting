@@ -105,5 +105,7 @@
        <p>This is an internel website page link <a href="page-name.html">page-name</a></p>
        <center>
        <p>a simple imge<img width="100" height="100" src="/fogm/camp.jpg"></p>
+       <p>Here is a video link, or map this will do to usa project . . use embedded code</p>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.3993564573625!2d-88.21631874877326!3d39.50547547938087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88731cfb1be92ccf%3A0xb66766a0bcfece60!2s2560%20W%20State%20St%2C%20Charleston%2C%20IL%2061920!5e0!3m2!1sen!2sus!4v1644615411671!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
        </center>
       </div>
