@@ -89,4 +89,11 @@
 <!-- Image 3 -->
 <div id="img3"> 
   <img src="/fogm/fire-pit.png">
+
+ <div id="about"class="wrapper">
+  <img src="/fogm/camp.jpg"align="right"pt-3 alt="camp" width="200"height="200">
+    <div class="flex">
+
+    </div>
+  </div>
 </div>
