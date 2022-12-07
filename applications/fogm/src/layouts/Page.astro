@@ -1,0 +1,11 @@
+---
+import Base from './Base.astro';
+const { frontmatter } = Astro.props
+---
+
+<Base {frontmatter}>
+    <div class="gradient"></div>
+    <div class="wrapper">
+        <slot />
+    </div>
+</Base>

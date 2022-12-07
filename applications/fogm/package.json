@@ -1,9 +1,0 @@
-{
-    "name": "fogm",
-    "version": "0.0.1",
-    "scripts": {
-        "start": "svelte-kit dev",
-        "build": "svelte-kit build"
-    },
-    "type": "module"
-}
