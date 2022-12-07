@@ -8,12 +8,10 @@
 
     const findParent = (path: string[]) => {
         let iterateNav = nav;
-        let debug = nav;
         path.forEach((i, index) => {
             const found = iterateNav.find(j => j.url === getParentPath(path, index + 1));
             if (!found) { return }
             iterateNav = found.children;
-            debug = found;
         })
         return iterateNav;
     }
