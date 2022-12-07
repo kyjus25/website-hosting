@@ -1,4 +1,4 @@
 ---
-title: Hello, World
+title: Jump Start English
 layout: ../../../layouts/Page.astro
 ---

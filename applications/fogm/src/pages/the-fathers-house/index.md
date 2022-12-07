@@ -1,5 +1,5 @@
 ---
-title: Hello, World
+title: The Fathers House
 layout: ../../layouts/Page.astro
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Hello, World
+title: Faith at it's Worth
 layout: ../../../layouts/Page.astro
 ---
 

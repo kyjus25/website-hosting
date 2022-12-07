@@ -1,4 +1,4 @@
 ---
-title: Hello, World
+title: Jerusalem Ministry
 layout: ../../layouts/Page.astro
 ---

@@ -1,4 +1,4 @@
 ---
-title: Hello, World
+title: Prison Ministry
 layout: ../../layouts/Page.astro
 ---

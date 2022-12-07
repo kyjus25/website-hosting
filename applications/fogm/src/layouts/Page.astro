@@ -6,6 +6,7 @@ const { frontmatter } = Astro.props
 <Base {frontmatter}>
     <div class="gradient"></div>
     <div class="wrapper">
+        <h1>{frontmatter.title}</h1>
         <slot />
     </div>
 </Base>

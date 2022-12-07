@@ -1,0 +1,63 @@
+---
+    const nav = [];
+    const {posts} = Astro.props;
+
+    const getParentPath = (paths: string[], deep: number) => {
+        return '/' + paths.slice(0, deep).join('/')
+    }
+
+    const findParent = (path: string[]) => {
+        let iterateNav = nav;
+        let debug = nav;
+        path.forEach((i, index) => {
+            const found = iterateNav.find(j => j.url === getParentPath(path, index + 1));
+            if (!found) { return }
+            iterateNav = found.children;
+            debug = found;
+        })
+        return iterateNav;
+    }
+
+
+    posts.sort((a,b) => a.url.length < b.url.length ? -1 : 1).forEach(i => {
+        const splitUrl = i.url.split('/');
+        const hasParents = splitUrl.length > 2;
+        let parent = nav;
+        if (hasParents) { 
+            const parentPath = splitUrl.slice(1, splitUrl.length - 1);
+            parent = findParent(parentPath)
+        }
+        parent.push({label: i.frontmatter.title, url: i.url || '/', children: []})
+    });
+---
+
+<nav>
+    <ul>
+        {nav.map((item) => 
+            <li>
+                <a href={item.url}>{item.label}</a>
+                {item.children.length > 0 && <ul>
+                    {item.children.map(item => 
+                        <li>
+                            <a href={item.url}>{item.label}</a>
+                            {item.children.length > 0 && <ul>
+                                {item.children.map(item => 
+                                    <li>
+                                        <a href={item.url}>{item.label}</a>
+                                        {item.children.length > 0 && <ul>
+                                            {item.children.map(item => 
+                                                <li>
+                                                    <a href={item.url}>{item.label}</a>
+                                                </li>
+                                            )}
+                                        </ul>}
+                                    </li>
+                                )}
+                            </ul>}
+                        </li>
+                    )}
+                </ul>}
+            </li>
+        )}
+    </ul>
+</nav>

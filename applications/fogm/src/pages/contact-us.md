@@ -1,4 +1,4 @@
 ---
-title: Hello, World
+title: Contact Us
 layout: ../layouts/Home.astro
 ---

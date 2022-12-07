@@ -1,3 +1,7 @@
+---
+import Nav from "../../../../util/Nav.astro";
+const posts = await Astro.glob('../pages/**/*.md');
+---
 <header>
     <div class="wrapper flex">
       <div id="logo">
@@ -6,7 +10,7 @@
         </a>
       </div>
       <div id="navigation">
-        Nav
+        <Nav {posts} />
       </div>
       <div id="social">
         <a href="https://www.facebook.com/fogtvinternational" target="_blank">

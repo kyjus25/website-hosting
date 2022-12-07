@@ -1,4 +1,4 @@
 ---
-title: Kenya Africa
+title: Sermons
 layout: ../../layouts/Page.astro
 ---
