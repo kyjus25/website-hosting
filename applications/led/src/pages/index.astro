@@ -3,49 +3,49 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="LED">
-  <section class="hero">
-    <div class="hero-backdrop"></div>
-    <div class="wrapper hero-content">
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 scale-105 bg-[linear-gradient(135deg,rgba(0,0,0,0.82),rgba(0,0,0,0.38)),url('/led-pic-bg.jpg')] bg-cover bg-center"></div>
+    <div class="relative mx-auto grid min-h-[38rem] w-[min(1180px,calc(100%-2rem))] items-center gap-8 py-16 lg:grid-cols-[1.1fr_0.9fr]">
       <div>
-        <p class="eyebrow">Production design for stages, events, and atmosphere</p>
-        <h1>Lighting that carries the room</h1>
-        <p class="lede">
+        <p class="mb-3 font-display text-base font-bold uppercase tracking-[0.12em] text-led-accent">Production design for stages, events, and atmosphere</p>
+        <h1 class="mb-4 font-display text-[clamp(3rem,8vw,6rem)] leading-[0.95] uppercase">Lighting that carries the room</h1>
+        <p class="leading-7 text-led-copy">
           The legacy site was a lightweight portfolio shell. This Astro version
           keeps that focus and turns it into a self-contained showcase.
         </p>
-        <a class="button-link" href="/portfolio">View Portfolio</a>
+        <a class="mt-4 inline-flex rounded-full bg-led-accent px-6 py-4 font-display font-bold uppercase tracking-[0.08em] text-black" href="/portfolio">View Portfolio</a>
       </div>
-      <div class="hero-card">
-        <img src="/led stage show.jpeg" alt="LED stage show" />
+      <div class="rounded-[1.5rem] border border-white/10 bg-led-panel p-4 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+        <img src="/led stage show.jpeg" alt="LED stage show" class="block w-full" />
       </div>
     </div>
   </section>
 
-  <section class="content-grid wrapper">
-    <article class="panel panel-large">
-      <h2>Our Portfolio</h2>
-      <p>
+  <section class="mx-auto grid w-[min(1180px,calc(100%-2rem))] gap-6 py-16 pb-20 lg:grid-cols-2">
+    <article class="rounded-[1.25rem] border border-white/10 bg-led-panel p-6 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px] lg:row-span-2">
+      <h2 class="mb-4 font-display text-[clamp(2rem,3vw,3rem)] leading-[0.95] uppercase">Our Portfolio</h2>
+      <p class="leading-7 text-led-copy">
         Concert stages, event installs, and environmental lighting concepts
         built to translate mood into something the audience can feel before the
         first cue lands.
       </p>
-      <img src="/led stage show.jpeg" alt="Live event lighting" />
+      <img src="/led stage show.jpeg" alt="Live event lighting" class="mt-4 block w-full rounded-2xl" />
     </article>
-    <article class="panel">
-      <h2>Photo Gallery</h2>
-      <p>Selected imagery from the original branch assets.</p>
-      <img src="/led-pic-bg.jpg" alt="LED production background" />
+    <article class="rounded-[1.25rem] border border-white/10 bg-led-panel p-6 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+      <h2 class="mb-4 font-display text-[clamp(2rem,3vw,3rem)] leading-[0.95] uppercase">Photo Gallery</h2>
+      <p class="leading-7 text-led-copy">Selected imagery from the original branch assets.</p>
+      <img src="/led-pic-bg.jpg" alt="LED production background" class="mt-4 block w-full rounded-2xl" />
     </article>
-    <article class="panel">
-      <h2>Latest Events</h2>
-      <p>
+    <article class="rounded-[1.25rem] border border-white/10 bg-led-panel p-6 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+      <h2 class="mb-4 font-display text-[clamp(2rem,3vw,3rem)] leading-[0.95] uppercase">Latest Events</h2>
+      <p class="leading-7 text-led-copy">
         Current event updates were not committed in git, so this migration keeps
         the structure and visual identity ready for fresh content.
       </p>
     </article>
-    <article class="panel accent-panel">
-      <h2>Need a design partner?</h2>
-      <p>
+    <article class="rounded-[1.25rem] border border-white/10 bg-[linear-gradient(135deg,rgba(244,224,77,0.2),rgba(255,255,255,0.06))] p-6 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+      <h2 class="mb-4 font-display text-[clamp(2rem,3vw,3rem)] leading-[0.95] uppercase">Need a design partner?</h2>
+      <p class="leading-7 text-led-copy">
         Use this app as the new isolated home for future LED updates without
         depending on the legacy Svelte data layer.
       </p>

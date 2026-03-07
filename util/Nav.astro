@@ -31,22 +31,22 @@
 ---
 
 <nav>
-    <ul>
+    <ul class="m-0 flex list-none flex-wrap items-center justify-center gap-y-3 p-0">
         {nav.map((item) => 
-            <li>
-                <a href={item.url}>{item.label}</a>
-                {item.children.length > 0 && <ul>
+            <li class="group relative inline-block font-medium uppercase">
+                <a href={item.url} class="inline-block px-5 text-white hover:opacity-80">{item.label}</a>
+                {item.children.length > 0 && <ul class="mt-5 hidden min-w-[250px] bg-white text-left text-black group-hover:block lg:absolute">
                     {item.children.map(item => 
-                        <li>
-                            <a href={item.url}>{item.label}</a>
-                            {item.children.length > 0 && <ul>
+                        <li class="group/item relative block">
+                            <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
+                            {item.children.length > 0 && <ul class="hidden min-w-[250px] bg-white text-left text-black group-hover/item:block lg:absolute lg:top-0 lg:left-[270px]">
                                 {item.children.map(item => 
-                                    <li>
-                                        <a href={item.url}>{item.label}</a>
-                                        {item.children.length > 0 && <ul>
+                                    <li class="group/subitem relative block">
+                                        <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
+                                        {item.children.length > 0 && <ul class="hidden min-w-[250px] bg-white text-left text-black group-hover/subitem:block lg:absolute lg:top-0 lg:left-[270px]">
                                             {item.children.map(item => 
-                                                <li>
-                                                    <a href={item.url}>{item.label}</a>
+                                                <li class="block">
+                                                    <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
                                                 </li>
                                             )}
                                         </ul>}

@@ -3,18 +3,18 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="CCEDS | Contact">
-  <section class="contact-page">
-    <div class="wrapper narrow">
-      <h1>Contact Us</h1>
-      <p>
+  <section class="bg-[linear-gradient(180deg,white_0%,#f4f4f4_100%)] py-20">
+    <div class="mx-auto w-[min(720px,calc(100%-2rem))]">
+      <h1 class="mb-4 mt-0 text-[clamp(2.4rem,5vw,4.8rem)] leading-[0.96] uppercase">Contact Us</h1>
+      <p class="mt-0 leading-7">
         The original site exposed a simple contact form. This preserves that
         page structure while the delivery workflow is migrated.
       </p>
-      <form class="contact-form">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea rows="6" placeholder="Message"></textarea>
-        <button type="button">Send Message</button>
+      <form class="grid gap-4">
+        <input type="text" placeholder="Name" class="w-full rounded-xl border border-[#ddd] bg-[#fafafa] px-4 py-4" />
+        <input type="email" placeholder="Email" class="w-full rounded-xl border border-[#ddd] bg-[#fafafa] px-4 py-4" />
+        <textarea rows="6" placeholder="Message" class="w-full rounded-xl border border-[#ddd] bg-[#fafafa] px-4 py-4"></textarea>
+        <button type="button" class="inline-flex w-full items-center justify-center rounded-full border border-cceds-primary px-6 py-4 font-bold uppercase text-cceds-primary transition hover:bg-cceds-primary hover:text-white">Send Message</button>
       </form>
     </div>
   </section>

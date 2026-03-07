@@ -6,4 +6,4 @@ draft: true
 nav: false
 ---
 
-Draft page from WordPress.
+

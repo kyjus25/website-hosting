@@ -1,6 +1,6 @@
 ---
 title: "Faith at it's Worth"
-layout: ../../../layouts/Page.astro
+layout: ../../layouts/Page.astro
 date: "2017-06-06 22:28:13"
 nav: false
 ---

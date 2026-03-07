@@ -18,15 +18,15 @@ const { title = 'WebTV' } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="m-0 bg-webtv-shell font-sans text-webtv-copy">
     <Header />
-    <div class="wrapper shell">
+    <div class="mx-auto grid w-[min(1200px,calc(100%-2rem))] gap-4 bg-white pb-4 shadow-[0_-3px_10px_2px_rgba(0,0,0,0.45)] lg:grid-cols-[240px_minmax(0,1fr)]">
       <Sidebar />
-      <main class="content">
+      <main class="min-w-0 px-4 pb-4 lg:pr-4 lg:pl-0">
         <slot />
       </main>
     </div>
-    <div class="wrapper">
+    <div class="mx-auto w-[min(1200px,calc(100%-2rem))]">
       <Footer />
     </div>
   </body>

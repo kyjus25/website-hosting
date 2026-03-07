@@ -2,21 +2,21 @@
 const { pathname } = Astro.url;
 ---
 
-<header class="site-header">
-  <div class="wrapper masthead">
-    <a href="/" class="brand">
-      <img src="/led.png" alt="LED logo" />
+<header class="sticky top-0 z-10 bg-black/55 backdrop-blur-[20px]">
+  <div class="mx-auto w-[min(1180px,calc(100%-2rem))] py-4">
+    <a href="/" class="flex items-center gap-4 font-display text-[clamp(1.4rem,3vw,2rem)] tracking-[0.04em]">
+      <img src="/led.png" alt="LED logo" class="h-[4.5rem]" />
       <div>
-        <span class="brand-accent">L</span>ighting
-        <span class="brand-accent">E</span>ntertainment
-        <span class="brand-accent">D</span>esign
+        <span class="font-bold text-led-accent">L</span>ighting
+        <span class="font-bold text-led-accent">E</span>ntertainment
+        <span class="font-bold text-led-accent">D</span>esign
       </div>
     </a>
   </div>
-  <nav class="site-nav" aria-label="Primary">
-    <div class="wrapper">
-      <a href="/" class={pathname === '/' ? 'active' : undefined}>Home</a>
-      <a href="/portfolio" class={pathname === '/portfolio' ? 'active' : undefined}>Portfolio</a>
+  <nav class="border-y border-white/10 bg-black/70" aria-label="Primary">
+    <div class="mx-auto flex w-[min(1180px,calc(100%-2rem))]">
+      <a href="/" class:list={['px-5 py-4 font-display font-bold uppercase tracking-[0.08em] transition hover:bg-white hover:text-black', pathname === '/' && 'bg-white text-black']}>Home</a>
+      <a href="/portfolio" class:list={['px-5 py-4 font-display font-bold uppercase tracking-[0.08em] transition hover:bg-white hover:text-black', pathname === '/portfolio' && 'bg-white text-black']}>Portfolio</a>
     </div>
   </nav>
 </header>

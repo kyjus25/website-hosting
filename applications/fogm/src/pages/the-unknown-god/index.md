@@ -32,4 +32,4 @@ Today people wonder:  “Does he even answer prayer?” Is it really that way or
 
 We here at Fire Of God Ministries want to make God known to man and help man be known by God personally. We want them to experience a relationship so strong that they can never deny his existence and who he is. We want to end the Nicolatians(rev. 2:6 14-15 acts 6:5) teachings of mystery Babylon and serve one God and serve God first. We want to believe and be immersed in Jesus and show others how to do the same and make God and His Kingdom known again on earth as it is in heaven.
 
-<img src="/wp-content/uploads/2017/06/unknown-God.jpg" style="width: 100%; height: auto;" />
+<img src="/wp-content/uploads/2017/06/unknown-God.jpg.jpg" class="h-auto w-full" />

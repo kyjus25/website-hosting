@@ -6,4 +6,4 @@ draft: true
 nav: false
 ---
 
-Plugin-generated sitemap page migrated as a draft placeholder.
+

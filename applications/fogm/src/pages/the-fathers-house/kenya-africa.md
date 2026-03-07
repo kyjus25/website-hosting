@@ -11,7 +11,7 @@ Welcome to Kenya Africa
 <figcaption>Travels Made Difficult</figcaption>
 </figure>
 
-<div style="text-align: center;">
+<div class="text-center">
 
 </div>
 

@@ -3,29 +3,29 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="LED | Portfolio">
-  <section class="portfolio-page wrapper">
-    <div class="page-heading">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Visual references from the legacy branch</h1>
-      <p>
+  <section class="mx-auto w-[min(1180px,calc(100%-2rem))] py-16 pb-20">
+    <div class="max-w-[46rem]">
+      <p class="mb-3 font-display text-base font-bold uppercase tracking-[0.12em] text-led-accent">Portfolio</p>
+      <h1 class="mb-4 font-display text-[clamp(3rem,8vw,6rem)] leading-[0.95] uppercase">Visual references from the legacy branch</h1>
+      <p class="leading-7 text-led-copy">
         The previous site linked to portfolio content without a committed data
         source. These retained assets provide a stable base for rebuilding that
         gallery.
       </p>
     </div>
 
-    <div class="portfolio-grid">
-      <figure class="portfolio-card">
-        <img src="/led stage show.jpeg" alt="Stage show lighting" />
-        <figcaption>Stage show setup</figcaption>
+    <div class="mt-8 grid gap-6 lg:grid-cols-3">
+      <figure class="m-0 rounded-[1.25rem] border border-white/10 bg-led-panel p-4 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+        <img src="/led stage show.jpeg" alt="Stage show lighting" class="block aspect-[4/3] w-full rounded-[0.9rem] object-cover" />
+        <figcaption class="px-0 pt-3 pb-1 leading-7 text-led-copy">Stage show setup</figcaption>
       </figure>
-      <figure class="portfolio-card">
-        <img src="/led-pic-bg.jpg" alt="Lighting design background" />
-        <figcaption>Production background</figcaption>
+      <figure class="m-0 rounded-[1.25rem] border border-white/10 bg-led-panel p-4 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+        <img src="/led-pic-bg.jpg" alt="Lighting design background" class="block aspect-[4/3] w-full rounded-[0.9rem] object-cover" />
+        <figcaption class="px-0 pt-3 pb-1 leading-7 text-led-copy">Production background</figcaption>
       </figure>
-      <figure class="portfolio-card">
-        <img src="/led.png" alt="LED brand mark" />
-        <figcaption>Brand identity</figcaption>
+      <figure class="m-0 rounded-[1.25rem] border border-white/10 bg-led-panel p-4 shadow-[0_22px_64px_rgba(0,0,0,0.28)] backdrop-blur-[12px]">
+        <img src="/led.png" alt="LED brand mark" class="block aspect-[4/3] w-full rounded-[0.9rem] object-cover" />
+        <figcaption class="px-0 pt-3 pb-1 leading-7 text-led-copy">Brand identity</figcaption>
       </figure>
     </div>
   </section>

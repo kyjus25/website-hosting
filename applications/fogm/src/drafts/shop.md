@@ -6,4 +6,4 @@ draft: true
 nav: false
 ---
 
-WooCommerce-powered page migrated as a draft placeholder.
+

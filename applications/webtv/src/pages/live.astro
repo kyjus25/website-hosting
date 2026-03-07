@@ -3,14 +3,14 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="WebTV | Live">
-  <article class="card">
-    <h1>Live</h1>
-    <p>
+  <article class="mt-4 border border-webtv-border bg-webtv-card p-6">
+    <h1 class="mt-0 text-4xl font-semibold">Live</h1>
+    <p class="leading-7">
       The embedded HLS player in the legacy branch was commented out. This page
       keeps the route active and preserves the committed media asset while a new
       live source is wired in.
     </p>
-    <video controls preload="metadata" class="video-frame">
+    <video controls preload="metadata" class="mt-4 max-h-[36rem] w-full bg-black">
       <source src="/USA Project.mp4" type="video/mp4" />
       Your browser does not support HTML video.
     </video>

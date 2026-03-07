@@ -4,11 +4,11 @@ layout: ../../../layouts/Page.astro
 date: "2017-06-06 17:00:12"
 ---
 
-# <img src="/wp-content/uploads/2017/06/1353281_10205478222249828_126637589_o.jpg" class="alignnone size-full wp-image-30" style="width:100.0%" />
+# <img src="/wp-content/uploads/2017/06/1353281_10205478222249828_126637589_o.jpg" class="alignnone size-full wp-image-30 w-full" />
 
 # To Brazil and Beyond (Called to the Nations)
 
-**While Fire Of God Ministries is based out of the United States, we have a passion and calling to go to the Nations to teach and [train Jesus disciples](/sermons/study-words/) to go do the same. When you pray ‘Lord show me where you need me to go to do your will’, God will show you and see if you will be obedient.**
+**While Fire Of God Ministries is based out of the United States, we have a passion and calling to go to the Nations to teach and [train Jesus disciples](/sermons/bible-study-stories/) to go do the same. When you pray ‘Lord show me where you need me to go to do your will’, God will show you and see if you will be obedient.**
 
 **[<img src="/admin/uploads/chair%20purchase.jpg" class="alignleft" width="150" height="200" alt="teach, preach, train, desciples, jesus, bible" />](/the-fathers-house/brazil-ministry/the-valley-of-transformation/)David White has shown God he would be obedient (Mathew 28:19) and it was no surprise when God said ‘Go to Brazil and bring my Kingdom to them there!” (Luke9:3)  Dave has left all his belongings and even family behind (Geneses 22:12 and Proverbs 3:6)  to go preach God’s word to the world in spite of many who do not understand and criticize him for it. Jesus said to Love God is the first and most important command and the second is to love others as yourself. To Love God means obedience and in obedience you will Love others with the love of God. The season of Dave working without his family in Brazil has come to a close and his wife and daughter are with him. They have recently moved into a house of there own and God has big plans for them there in Boituva and all of Brazil while going into many neighboring nations. In this Obedience, God has been doing a mighty work in Brazil and is using Fire Of God Ministries but really he is using the Bride of Christ to do the end time work for what we believe to be the final epic battle for Jesus’ return.Many spiritualist and devil worshipers are finding Christ Jesus in the streets and in the Amazon, Paraguay and other surrounding counties. God is not finished but only getting started.**
 

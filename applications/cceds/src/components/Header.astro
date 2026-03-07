@@ -2,20 +2,20 @@
 const { pathname } = Astro.url;
 ---
 
-<header class="site-header">
-  <div class="wrapper header-row">
-    <div class="logo">
-      <a href="/">Coles County Express Delivery Services</a>
+<header class="sticky top-0 z-10 bg-white/95 shadow-[0_14px_32px_rgba(17,17,17,0.08)] backdrop-blur-sm">
+  <div class="mx-auto grid w-[min(1200px,calc(100%-2rem))] items-center md:grid-cols-[280px_minmax(0,1fr)_210px]">
+    <div class="bg-cceds-dark text-center md:text-left">
+      <a href="/" class="block px-6 py-5 text-[0.95rem] font-bold uppercase tracking-[0.08em] text-white">Coles County Express Delivery Services</a>
     </div>
     <nav aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="/#schedule" class={pathname === '/' ? 'active' : undefined}>Schedule</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/contact" class={pathname === '/contact' ? 'active' : undefined}>Contact</a></li>
+      <ul class="m-0 flex list-none flex-wrap justify-center p-0">
+        <li><a href="/#schedule" class:list={['block px-4 py-4 text-[0.95rem] font-medium uppercase hover:text-cceds-primary md:px-4 md:py-7', pathname === '/' && 'text-cceds-primary']}>Schedule</a></li>
+        <li><a href="/#about" class="block px-4 py-4 text-[0.95rem] font-medium uppercase hover:text-cceds-primary md:px-4 md:py-7">About</a></li>
+        <li><a href="/#services" class="block px-4 py-4 text-[0.95rem] font-medium uppercase hover:text-cceds-primary md:px-4 md:py-7">Services</a></li>
+        <li><a href="/contact" class:list={['block px-4 py-4 text-[0.95rem] font-medium uppercase hover:text-cceds-primary md:px-4 md:py-7', pathname === '/contact' && 'text-cceds-primary']}>Contact</a></li>
       </ul>
     </nav>
-    <div class="phone">
+    <div class="flex items-center justify-center gap-3 bg-cceds-primary p-4 font-bold text-white md:h-full">
       <i class="fas fa-phone" aria-hidden="true"></i>
       <span>(217) 549-5555</span>
     </div>

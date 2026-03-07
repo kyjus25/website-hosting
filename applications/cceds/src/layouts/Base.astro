@@ -17,9 +17,9 @@ const { title = 'CCEDS' } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="m-0 bg-[#fbfbfb] font-sans text-cceds-copy">
     <Header />
-    <main>
+    <main class="min-h-[calc(100vh-168px)]">
       <slot />
     </main>
     <Footer />

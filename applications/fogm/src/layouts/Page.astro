@@ -4,9 +4,14 @@ const { frontmatter } = Astro.props
 ---
 
 <Base {frontmatter}>
-    <div class="gradient"></div>
-    <div class="wrapper">
-        <h1>{frontmatter.title}</h1>
-        <slot />
-    </div>
+    <section class="bg-[linear-gradient(45deg,#e16521,#e4381C)] pt-[clamp(120px,18vw,180px)] pb-[clamp(40px,8vw,70px)]">
+        <div class="mx-auto w-[min(1200px,calc(100%-48px))]">
+            <h1 class="m-0 font-display text-5xl uppercase">{frontmatter.title}</h1>
+        </div>
+    </section>
+    <article class="py-12 leading-[30px] [&_a]:text-fogm-red [&_a:hover]:opacity-80 [&_audio]:w-full [&_figure]:mx-0 [&_h1]:my-9 [&_h1]:font-display [&_h1]:text-5xl [&_h1]:font-medium [&_h1]:uppercase [&_h2]:my-6 [&_h2]:font-display [&_h2]:text-4xl [&_h2]:uppercase [&_h3]:my-5 [&_h3]:font-display [&_h3]:text-3xl [&_h3]:uppercase [&_iframe]:max-w-full [&_iframe]:border-0 [&_img]:mx-auto [&_img]:my-4 [&_img]:h-auto [&_img]:max-w-full [&_li]:break-words [&_p]:break-words">
+        <div class="mx-auto w-[min(1200px,calc(100%-48px))]">
+            <slot />
+        </div>
+    </article>
 </Base>

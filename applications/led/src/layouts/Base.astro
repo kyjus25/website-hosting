@@ -17,9 +17,9 @@ const { title = 'LED' } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="m-0 bg-[radial-gradient(circle_at_top,rgba(244,224,77,0.16),transparent_38%),linear-gradient(180deg,#121212_0%,#000000_100%)] font-sans text-white">
     <Header />
-    <main>
+    <main class="min-h-[calc(100vh-164px)]">
       <slot />
     </main>
     <Footer />
