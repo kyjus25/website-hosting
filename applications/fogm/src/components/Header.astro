@@ -1,6 +1,6 @@
 ---
 import Nav from "../../../../util/Nav.astro";
-const posts = await Astro.glob('../pages/**/*.md');
+const posts = Object.values(import.meta.glob('../pages/**/*.md', { eager: true }));
 ---
 <header>
     <div class="wrapper flex">
