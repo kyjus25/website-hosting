@@ -4,10 +4,10 @@ layout: ../../../layouts/Page.astro
 date: "2017-06-06 17:20:25"
 nav: false
 ---
-
+# The Valley of Transformation
 <iframe src="https://www.youtube.com/embed/TVxUtJHsiFA" width="100%" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-**There is an incredible project God is doing on the edge of Sao Paulo in a large valley**. This work is in a very poor village lacking hope and peace with many great needs known as Vila da Paz. This valley is filled with violence and a desperate people with no answers that has created an environment where drugs, violence  and chaos run rampant. The people here live in darkness and fear reaching out for answers but are only finding emptiness and despair. God has spoken to us that there is only one hope for these people and that is our Lord Jesus Christ.
+**There is an incredible project God is doing on the edge of Sao Paulo in a large valley**. This work is in a very poor village lacking hope and peace with many great needs known as Vila da Paz. This valley is filled with violence and a desperate people with no answers that has created an environment where drugs, violence and chaos run rampant. The people here live in darkness and fear reaching out for answers but are only finding emptiness and despair. God has spoken to us that there is only one hope for these people and that is our Lord Jesus Christ.
 
 This project is starting to bring like-minded ministries together with one purpose and with the same mission under what God is doing there. We believe God is pouring out His Holy Spirit and has started a revival in a land and in a people that most won’t go near.
 

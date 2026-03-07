@@ -4,16 +4,15 @@ layout: ../../../layouts/Page.astro
 date: "2017-09-19 13:22:22"
 nav: false
 ---
-
 # <img src="/wp-content/uploads/2017/09/18221905_1168354209940074_4059863142660969823_n.png" class="wp-image-292 alignnone" width="204" height="204" />Outlet Boituva and Dourados
 
-#        **Brazils fastest growing OUTLET**
+## Brazils fastest growing OUTLET
 
-###     This is your one stop     shopping     extravaganza!!!
+### This is your one stop shopping extravaganza!!!
 
-##                           **Come visit our outlets and see**
+## Come visit our outlets and see
 
-###         why we are changing the way Brazil does outlet!
+### why we are changing the way Brazil does outlet!
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 

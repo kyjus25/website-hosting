@@ -4,8 +4,8 @@ layout: ../../../layouts/Page.astro
 date: "2017-09-05 11:13:56"
 nav: false
 ---
-
-### <img src="/wp-content/uploads/2017/09/16665373_10210034119384409_4016359047270862768_o.jpg" class="wp-image-252 alignleft" width="199" height="199" />   Missionary Pastor from Chicago to Brazil.
+# Pr. David White U.S.A./Brazil
+### <img src="/wp-content/uploads/2017/09/16665373_10210034119384409_4016359047270862768_o.jpg" class="wp-image-252 alignleft" width="199" height="199" /> Missionary Pastor from Chicago to Brazil.
 
 Serving God full time in Boituva in the state of Sao Paulo
 

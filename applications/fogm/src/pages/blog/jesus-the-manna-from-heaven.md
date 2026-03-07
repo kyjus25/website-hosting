@@ -4,14 +4,14 @@ layout: ../../layouts/Page.astro
 date: "2017-06-06 22:15:54"
 nav: false
 ---
-
+# Jesus: The Manna From Heaven
 ## WHO IS THIS JESUS?
 
 Who is Jesus and what gives Him the right to say He is the Son of God and the Manna from heaven? This is argued by many religions as most now believe He existed (only after the proof he walked the earth came available.) They believe He was just a prophet like Mohammad or Buddha or like one of many others. The Islamic way would argue Jesus would never say he was the Son of God! The Jews didn't believe He was the Messiah or the Son of God or a King. They looked for signs but even though Jesus filled every one of the 300 (200 prophecies in Isaiah), they rejected him and couldn’t see through their religion because He was not as they expected and did not teach as they expected.
 
 ## So again, Why does he say He is the Son of God, The Bread of Life?
 
-In order to answer this, we must first establish his roots. We need to know where he comes from and to do that we start in John 1:1 1 In the beginning was the Word, and the Word was with God, and the Word was God. 2 He was in the beginning with God. 3 All things came into being by Him, and apart from Him nothing came into being that has come into being. 4 In Him was life, and the life was the light of men. 5 And the light shines in the darkness, and the darkness did not comprehend it. John 1:1-5 To me, this seems to describe most of what we have talked about already.  Now we need to know who this "Word" is since Jesus’ claims seem to fit that description.
+In order to answer this, we must first establish his roots. We need to know where he comes from and to do that we start in John 1:1 1 In the beginning was the Word, and the Word was with God, and the Word was God. 2 He was in the beginning with God. 3 All things came into being by Him, and apart from Him nothing came into being that has come into being. 4 In Him was life, and the life was the light of men. 5 And the light shines in the darkness, and the darkness did not comprehend it. John 1:1-5 To me, this seems to describe most of what we have talked about already. Now we need to know who this "Word" is since Jesus’ claims seem to fit that description.
 
 ## How can we find out who the Word is?
 

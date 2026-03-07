@@ -13,6 +13,7 @@
         "webtv:build": "cd ./applications/webtv && astro build"
     },
     "dependencies": {
+        "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.2.1",
         "astro": "^5.18.0",
         "tailwindcss": "^4.2.1"

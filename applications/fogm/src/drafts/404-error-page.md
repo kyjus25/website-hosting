@@ -5,7 +5,7 @@ date: "2017-11-02 17:01:23"
 draft: true
 nav: false
 ---
-
+# 404 error page
 <div class="wall" style="background-color: #F2F3F7; border: 30px solid #fff; width: 90%; height: 90%; margin: 0 auto;">
 
 # ERROR 404 - NOT FOUND

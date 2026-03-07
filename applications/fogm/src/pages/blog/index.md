@@ -3,7 +3,7 @@ title: "Blog"
 nav: false
 layout: ../../layouts/Page.astro
 ---
-
+# Blog
 Browse the archived ministry posts from the original site.
 
 - [Faith at it's Worth](/blog/faith-at-its-worth/) (2017-06-06)

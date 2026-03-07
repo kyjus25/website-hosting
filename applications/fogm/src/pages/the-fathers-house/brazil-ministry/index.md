@@ -3,10 +3,9 @@ title: "Brazil Ministry"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 17:00:12"
 ---
-
 # <img src="/wp-content/uploads/2017/06/1353281_10205478222249828_126637589_o.jpg" class="alignnone size-full wp-image-30 w-full" />
 
-# To Brazil and Beyond (Called to the Nations)
+## To Brazil and Beyond (Called to the Nations)
 
 **While Fire Of God Ministries is based out of the United States, we have a passion and calling to go to the Nations to teach and [train Jesus disciples](/sermons/bible-study-stories/) to go do the same. When you pray ‘Lord show me where you need me to go to do your will’, God will show you and see if you will be obedient.**
 
@@ -18,6 +17,6 @@ date: "2017-06-06 17:00:12"
 
 **[<img src="/admin/uploads/church%20in%20house.jpg" class="alignright" width="200" height="267" alt="train, bible, teach, jesus, brazil, desciple" />](/the-fathers-house/brazil-ministry/the-valley-of-transformation/)We are working on  holding bible studies, English classes in Villa De Paz, Cortia and in Camdo- Limpo but also hold prayer gatherings along with worship services out of the Ministry house and in many places on the spot in the community and are looking to see what God wants us to do next. While we believe that this is part of what we are to do, we know God wants the streets to be where we focus our ministry most of the time. God has shown us over and over His love and compassion for humanity and to those who Love Him and need Him.**
 
-**Fire of God Ministries is currently working with our brothers and sisters in much of Brazil.  We will soon be ministering in neighboring countries and will be traveling across most of the United States as well as some other nations.  We plan to teach and train wherever and who ever God leads to do Gods will. Live and serve Jesus first in all things and in all seasons , Believe and be immersed in Jesus the Christ!**
+**Fire of God Ministries is currently working with our brothers and sisters in much of Brazil. We will soon be ministering in neighboring countries and will be traveling across most of the United States as well as some other nations. We plan to teach and train wherever and who ever God leads to do Gods will. Live and serve Jesus first in all things and in all seasons , Believe and be immersed in Jesus the Christ!**
 
-**([The valley of transformation page](/the-fathers-house/brazil-ministry/the-valley-of-transformation/))**
+## ([The valley of transformation page](/the-fathers-house/brazil-ministry/the-valley-of-transformation/))

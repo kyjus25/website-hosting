@@ -4,7 +4,7 @@ layout: ../../layouts/Page.astro
 date: "2017-06-06 22:06:41"
 nav: false
 ---
-
+# The Lesson of the Banana Tree
 <div id="mod_40157575" class="module moduleText color0">
 
 ## The Lesson Of The Banana Tree
@@ -25,7 +25,7 @@ While I was transplanting some banana trees one day, God began to speak to me. I
 
 </div>
 
-##  How God views the lessons
+## How God views the lessons
 
 </div>
 
