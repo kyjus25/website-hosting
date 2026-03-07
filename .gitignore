@@ -23,6 +23,8 @@ pnpm-debug.log*
 
 bun.lock
 
+.playwright-cli
+
 # local media uploads
 *.mp4
 *.mov
