@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="LED">
+  <section class="hero">
+    <div class="hero-backdrop"></div>
+    <div class="wrapper hero-content">
+      <div>
+        <p class="eyebrow">Production design for stages, events, and atmosphere</p>
+        <h1>Lighting that carries the room</h1>
+        <p class="lede">
+          The legacy site was a lightweight portfolio shell. This Astro version
+          keeps that focus and turns it into a self-contained showcase.
+        </p>
+        <a class="button-link" href="/portfolio">View Portfolio</a>
+      </div>
+      <div class="hero-card">
+        <img src="/led stage show.jpeg" alt="LED stage show" />
+      </div>
+    </div>
+  </section>
+
+  <section class="content-grid wrapper">
+    <article class="panel panel-large">
+      <h2>Our Portfolio</h2>
+      <p>
+        Concert stages, event installs, and environmental lighting concepts
+        built to translate mood into something the audience can feel before the
+        first cue lands.
+      </p>
+      <img src="/led stage show.jpeg" alt="Live event lighting" />
+    </article>
+    <article class="panel">
+      <h2>Photo Gallery</h2>
+      <p>Selected imagery from the original branch assets.</p>
+      <img src="/led-pic-bg.jpg" alt="LED production background" />
+    </article>
+    <article class="panel">
+      <h2>Latest Events</h2>
+      <p>
+        Current event updates were not committed in git, so this migration keeps
+        the structure and visual identity ready for fresh content.
+      </p>
+    </article>
+    <article class="panel accent-panel">
+      <h2>Need a design partner?</h2>
+      <p>
+        Use this app as the new isolated home for future LED updates without
+        depending on the legacy Svelte data layer.
+      </p>
+    </article>
+  </section>
+</Base>

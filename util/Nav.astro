@@ -1,6 +1,7 @@
 ---
     const nav = [];
     const {posts} = Astro.props;
+    const visiblePosts = posts.filter((post) => post.frontmatter?.nav !== false);
 
     const getParentPath = (paths: string[], deep: number) => {
         return '/' + paths.slice(0, deep).join('/')
@@ -17,7 +18,7 @@
     }
 
 
-    posts.sort((a,b) => a.url.length < b.url.length ? -1 : 1).forEach(i => {
+    visiblePosts.sort((a,b) => a.url.length < b.url.length ? -1 : 1).forEach(i => {
         const splitUrl = i.url.split('/');
         const hasParents = splitUrl.length > 2;
         let parent = nav;

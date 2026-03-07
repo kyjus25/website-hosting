@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="WebTV">
+  <section class="hero">
+    <img src="/banner.png" alt="WebTV banner" />
+  </section>
+
+  <section class="stack">
+    <article class="card">
+      <h1>Welcome to WebTV</h1>
+      <p>
+        The previous branch rendered most content from a data store that is not
+        present in this repository. This migration keeps the site structure,
+        styling, and local media in a standalone Astro app so it can be updated
+        without the old runtime dependency.
+      </p>
+    </article>
+
+    <div class="card-grid">
+      <article class="card">
+        <h2>Live</h2>
+        <p>Jump into the retained video page and use this app as the new home for streaming updates.</p>
+        <a class="button-link" href="/live">Open Live Page</a>
+      </article>
+      <article class="card">
+        <h2>Mission</h2>
+        <p>Restore the mission page directly in Astro instead of relying on the missing legacy content source.</p>
+        <a class="button-link" href="/mission">Read More</a>
+      </article>
+      <article class="card">
+        <h2>Contact</h2>
+        <p>Use the contact route as the landing point for outreach, updates, and follow-up.</p>
+        <a class="button-link" href="/contact">Contact</a>
+      </article>
+    </div>
+  </section>
+</Base>

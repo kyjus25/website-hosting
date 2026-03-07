@@ -1,0 +1,23 @@
+---
+const { pathname } = Astro.url;
+---
+
+<header class="site-header">
+  <div class="wrapper header-row">
+    <div class="logo">
+      <a href="/">Coles County Express Delivery Services</a>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/#schedule" class={pathname === '/' ? 'active' : undefined}>Schedule</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/contact" class={pathname === '/contact' ? 'active' : undefined}>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="phone">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span>(217) 549-5555</span>
+    </div>
+  </div>
+</header>

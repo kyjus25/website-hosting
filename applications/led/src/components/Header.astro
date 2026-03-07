@@ -1,0 +1,22 @@
+---
+const { pathname } = Astro.url;
+---
+
+<header class="site-header">
+  <div class="wrapper masthead">
+    <a href="/" class="brand">
+      <img src="/led.png" alt="LED logo" />
+      <div>
+        <span class="brand-accent">L</span>ighting
+        <span class="brand-accent">E</span>ntertainment
+        <span class="brand-accent">D</span>esign
+      </div>
+    </a>
+  </div>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="wrapper">
+      <a href="/" class={pathname === '/' ? 'active' : undefined}>Home</a>
+      <a href="/portfolio" class={pathname === '/portfolio' ? 'active' : undefined}>Portfolio</a>
+    </div>
+  </nav>
+</header>

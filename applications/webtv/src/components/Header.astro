@@ -1,0 +1,28 @@
+---
+const { pathname } = Astro.url;
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/news', label: 'News' },
+  { href: '/live', label: 'Live' },
+  { href: '/donate', label: 'Donate' },
+  { href: '/contact', label: 'Contact' }
+];
+---
+
+<header class="site-header">
+  <div class="wrapper topbar">
+    <a href="/" class="logo">
+      <img src="/WebTv logo.png" alt="WebTV logo" />
+    </a>
+    <input type="text" placeholder="Search for a video or post..." aria-label="Search" />
+  </div>
+  <nav class="primary-nav" aria-label="Primary">
+    <ul class="wrapper">
+      {nav.map((item) => (
+        <li>
+          <a href={item.href} class={pathname === item.href ? 'active' : undefined}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
