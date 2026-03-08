@@ -3,12 +3,14 @@
     const {posts} = Astro.props;
     const visiblePosts = posts.filter((post) => post.frontmatter?.nav !== false);
     const rootOrder = [
-        '/the-fathers-house/',
-        '/the-unknown-god/',
-        '/sermons/',
-        '/mission-statement/',
-        '/contact-us/'
+        '/',
+        '/the-fathers-house',
+        '/the-unknown-god',
+        '/sermons',
+        '/mission-statement',
+        '/contact-us'
     ];
+    const normalizeUrl = (url: string) => url !== '/' && url.endsWith('/') ? url.slice(0, -1) : url;
 
     const getParentPath = (paths: string[], deep: number) => {
         return '/' + paths.slice(0, deep).join('/')
@@ -37,8 +39,8 @@
     });
 
     nav.sort((a, b) => {
-        const aIndex = rootOrder.indexOf(a.url);
-        const bIndex = rootOrder.indexOf(b.url);
+        const aIndex = rootOrder.indexOf(normalizeUrl(a.url));
+        const bIndex = rootOrder.indexOf(normalizeUrl(b.url));
 
         if (aIndex !== -1 || bIndex !== -1) {
             if (aIndex === -1) return 1;
