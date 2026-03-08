@@ -1,0 +1,45 @@
+services:
+  cceds:
+    image: cceds:latest
+    container_name: cceds
+    restart: always
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_HOST: colescountyexpressdeliveryservices.com
+
+  fogm:
+    image: fogm:latest
+    container_name: fireofg
+    restart: always
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_HOST: fireofgodmovementinternational.com
+
+  highline:
+    image: highline:latest
+    container_name: highline
+    restart: always
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_HOST: highlinemedia.org
+
+  led:
+    image: led:latest
+    container_name: led
+    restart: always
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_HOST: led-lightingentertainmentdesign.com
+
+  webtv:
+    image: webtv:latest
+    container_name: webtv
+    restart: always
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_HOST: webtv.international
