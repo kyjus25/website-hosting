@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Base title="CCEDS">
+  <Hero />
+
+  <section class="bg-white py-20">
+    <div class="mx-auto grid w-[min(1200px,calc(100%-2rem))] gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+        <i class="fas fa-briefcase text-3xl text-cceds-primary" aria-hidden="true"></i>
+        <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">Commercial Solutions</h2>
+        <p class="leading-7">A small business helping out other small businesses.</p>
+      </article>
+      <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+        <i class="fas fa-shield-alt text-3xl text-cceds-primary" aria-hidden="true"></i>
+        <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">Insured &amp; Reliable</h2>
+        <p class="leading-7">We handle the logistics so your delivery arrives safely and on time.</p>
+      </article>
+      <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+        <i class="fas fa-house text-3xl text-cceds-primary" aria-hidden="true"></i>
+        <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">Family Owned</h2>
+        <p class="leading-7">Family operated since the early beginnings, with service built on trust.</p>
+      </article>
+      <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+        <i class="fas fa-users text-3xl text-cceds-primary" aria-hidden="true"></i>
+        <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">Community Driven</h2>
+        <p class="leading-7">The success of our business depends on the success of the community.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="bg-[linear-gradient(180deg,#f4f4f4_0%,white_100%)] py-20">
+    <div class="mx-auto grid w-[min(1200px,calc(100%-2rem))] items-center gap-8 lg:grid-cols-[1.05fr_minmax(0,1fr)]">
+      <div class="min-h-[28rem] rounded-[1.5rem] bg-[url('/hero.jpg')] bg-cover bg-center shadow-[0_24px_56px_rgba(17,17,17,0.14)]" aria-hidden="true"></div>
+      <div>
+        <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">About Us</h2>
+        <p class="leading-7">
+          Coles County Express Delivery Services was built to help local families
+          and businesses move important cargo without overcomplicating the
+          process. The original site described the company as a practical,
+          community-focused delivery partner, and that is the part preserved
+          here.
+        </p>
+        <p class="leading-7">
+          From same-day pickups to planned delivery runs, the emphasis is on
+          dependable communication and flexible service for shipments that do not
+          fit a standard courier workflow.
+        </p>
+        <a class="inline-flex items-center justify-center rounded-full border border-cceds-primary px-6 py-4 font-bold uppercase text-cceds-primary transition hover:bg-cceds-primary hover:text-white" href="/contact">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20">
+    <div class="mx-auto w-[min(1200px,calc(100%-2rem))]">
+      <h2 class="my-4 text-[clamp(1.8rem,3vw,2.6rem)]">Some Things We Deliver</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-dog text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Pets</h3>
+        </article>
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-car text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Vehicles</h3>
+        </article>
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-shopping-basket text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Groceries</h3>
+        </article>
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-suitcase-rolling text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Luggage</h3>
+        </article>
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-hard-hat text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Building Material</h3>
+        </article>
+        <article class="rounded-2xl bg-white px-6 py-8 text-center shadow-[0_18px_36px_rgba(17,17,17,0.06)]">
+          <i class="fas fa-calendar text-3xl text-cceds-primary" aria-hidden="true"></i>
+          <h3 class="mt-4 text-2xl">Appliances</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

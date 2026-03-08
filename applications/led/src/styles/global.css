@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3", sans-serif;
+  --font-display: "Rajdhani", sans-serif;
+  --color-led-accent: #f4e04d;
+  --color-led-copy: rgba(255, 255, 255, 0.84);
+  --color-led-panel: rgba(255, 255, 255, 0.08);
+}

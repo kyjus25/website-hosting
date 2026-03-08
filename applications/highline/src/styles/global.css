@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Oswald", sans-serif;
+
+  --color-highline-ink: #08111d;
+  --color-highline-panel: #101c2d;
+  --color-highline-panel-strong: #132338;
+  --color-highline-line: #ffffff1f;
+  --color-highline-copy: #dbe7f4;
+  --color-highline-muted: #9fb3c7;
+  --color-highline-gold: #f5be67;
+  --color-highline-orange: #f97316;
+}

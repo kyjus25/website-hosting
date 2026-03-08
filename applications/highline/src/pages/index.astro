@@ -1,0 +1,345 @@
+---
+import Base from '../layouts/Base.astro';
+
+const featuredProjects = [
+  {
+    title: 'Coles County Express Delivery',
+    subtitle: 'Simple Delivery. Always.',
+    image: '/cceds-thumb.png',
+    note: 'Practical local-business visuals and branded media support.'
+  },
+  {
+    title: 'Jeunesse Health',
+    subtitle: 'Cellular Health',
+    image: '/jeunesse-thumb.png',
+    note: 'Promotional imagery built for wellness-focused messaging.'
+  },
+  {
+    title: 'Positively',
+    subtitle: '4th Street Records',
+    image: '/positively-records.jpg',
+    note: 'Promotional artwork for music and entertainment-focused creative campaigns.'
+  },
+  {
+    title: 'Camera Capture',
+    subtitle: '4K Resolution',
+    image: '/drone.png',
+    note: 'High-grade capture, editing, layering, and green-screen support.'
+  }
+];
+
+const services = [
+  'Church and social events',
+  'Sporting and work events',
+  'Weddings and family events',
+  'Farm and work events'
+];
+
+const promoGallery = [
+  { src: '/cceds-promo.png', alt: 'Coles County Express Delivery promo graphic' },
+  { src: '/positively-records.jpg', alt: 'Positively 4th Street Records promo graphic' },
+  { src: '/jeunesse-promo.png', alt: 'Jeunesse health promo graphic' },
+  { src: '/impala-promo.png', alt: 'Impala promo graphic' }
+];
+
+const eventHighlights = [
+  {
+    title: 'Aerial coverage',
+    copy: 'Drone-style visuals and sweeping environmental footage that add scale and motion to event storytelling.',
+    image: '/drone.png'
+  },
+  {
+    title: 'On-location portraits',
+    copy: 'Family, social, and business moments framed for replay rather than throwaway clips.',
+    image: '/team-photo.jpg'
+  },
+  {
+    title: 'Destination atmosphere',
+    copy: 'Scenic visuals that add scale, mood, and a polished finish to event storytelling.',
+    image: '/maldives.jpg'
+  }
+];
+---
+
+<Base
+  title="Highline Media"
+  description="Highline Media captures weddings, church events, sports, work events, and family moments with 4K video and polished promo visuals."
+>
+  <section class="relative isolate overflow-hidden">
+    <video
+      class="absolute inset-0 h-full w-full object-cover opacity-35"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="/maldives.jpg"
+    >
+      <source src="/landing-video.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-[linear-gradient(115deg,rgba(5,10,18,0.96),rgba(5,10,18,0.72)_46%,rgba(5,10,18,0.46)_75%,rgba(5,10,18,0.86))]"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-highline-ink to-transparent"></div>
+
+    <div class="relative mx-auto grid max-w-7xl gap-12 px-4 py-18 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_24rem] lg:px-8 lg:py-24">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold uppercase tracking-[0.4em] text-highline-gold">Flying Higher</p>
+          <h1 class="max-w-4xl font-display text-5xl uppercase leading-none tracking-[0.08em] text-white sm:text-6xl lg:text-8xl">
+            Video that keeps the moment alive
+          </h1>
+          <p class="max-w-3xl text-base leading-8 text-highline-copy sm:text-lg">
+            There is nothing better than photos and video captured in the moment. Highline Media preserves weddings,
+            ball games, church services, work events, first steps, and the kind of family memories that deserve to be replayed.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="#work"
+            class="inline-flex rounded-full bg-highline-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-highline-ink transition hover:bg-white"
+          >
+            View Work
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex rounded-full border border-white/15 px-6 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-white transition hover:border-highline-gold hover:bg-highline-gold hover:text-highline-ink"
+          >
+            Find Us
+          </a>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">Capture</p>
+            <p class="mt-2 text-sm leading-7 text-highline-copy">4K HD video coverage for personal, social, and business moments.</p>
+          </div>
+          <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">Edit</p>
+            <p class="mt-2 text-sm leading-7 text-highline-copy">Layered imagery, polished promo reels, and green-screen compositions.</p>
+          </div>
+          <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">Deliver</p>
+            <p class="mt-2 text-sm leading-7 text-highline-copy">Polished visuals designed to preserve the moment and present it with clarity.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="self-end rounded-[2rem] border border-white/10 bg-[rgba(16,28,45,0.88)] p-7 shadow-2xl shadow-black/30 backdrop-blur-xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">What We Capture</p>
+        <ul class="mt-6 space-y-4">
+          {services.map((service) => (
+            <li class="flex items-start gap-3 border-b border-white/10 pb-4 last:border-b-0 last:pb-0">
+              <span class="mt-1 h-2.5 w-2.5 rounded-full bg-highline-gold"></span>
+              <span class="text-sm leading-7 text-highline-copy">{service}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-8 rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
+          <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-muted">Base of operations</p>
+          <p class="mt-3 font-display text-3xl uppercase tracking-[0.12em] text-white">Charleston, IL</p>
+          <p class="mt-2 text-sm leading-7 text-highline-copy">Based in Charleston, Illinois and available for family, event, and business coverage.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="work" class="mx-auto max-w-7xl px-4 py-18 sm:px-6 lg:px-8 lg:py-24">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Featured Work</p>
+        <h2 class="mt-4 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white sm:text-5xl">
+          Brand and event highlights
+        </h2>
+      </div>
+      <p class="max-w-2xl text-sm leading-7 text-highline-muted sm:text-base">
+        Selected work spanning local business promotion, event coverage, and creative visual production.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {featuredProjects.map((project) => (
+        <article class="group rounded-[2rem] border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-highline-gold/40 hover:bg-white/10">
+          <div class="overflow-hidden rounded-[1.4rem] border border-white/10 bg-black/20">
+            <img
+              src={project.image}
+              alt={project.title}
+              class="aspect-[4/3] h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-5 space-y-3">
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">{project.subtitle}</p>
+            <h3 class="font-display text-3xl uppercase leading-none tracking-[0.06em] text-white">{project.title}</h3>
+            <p class="text-sm leading-7 text-highline-muted">{project.note}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="about" class="border-y border-white/10 bg-white/4">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-18 sm:px-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:px-8 lg:py-24">
+      <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/20">
+        <img src="/team-photo.jpg" alt="Highline Media team photo" class="h-full w-full object-cover" loading="lazy" />
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent p-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">Highline Media</p>
+          <p class="mt-2 max-w-md text-sm leading-7 text-white/80">
+            Preserving the moments that bring a family back together every time the video plays.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center gap-6">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">About</p>
+          <h2 class="mt-4 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white sm:text-5xl">
+            Storytelling built around real moments
+          </h2>
+        </div>
+
+        <p class="text-base leading-8 text-highline-copy">
+          Highline Media creates video and photography that hold on to the moments people want to keep. From weddings and
+          church services to jobsites, ball games, and family milestones, the focus is on capturing the energy of the day
+          and turning it into something worth revisiting.
+        </p>
+
+        <p class="text-base leading-8 text-highline-copy">
+          Every project is approached with the same goal: deliver coverage that feels personal, clear, and lasting for families,
+          organizations, and businesses that want more than a throwaway recording.
+        </p>
+
+        <div class="grid gap-4 sm:grid-cols-[minmax(0,1fr)_13rem]">
+          <div class="rounded-[1.75rem] border border-white/10 bg-highline-panel/70 p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">Production Notes</p>
+            <p class="mt-3 text-sm leading-7 text-highline-copy">
+              4K capture, image editing, layered video feeds, and green-screen production support a wide range of event and promotional work.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-4">
+            <img src="/drone.png" alt="Drone media graphic" class="mx-auto h-full max-h-44 w-auto object-contain" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="mx-auto max-w-7xl px-4 py-18 sm:px-6 lg:px-8 lg:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">What We Do</p>
+      <h2 class="mt-4 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white sm:text-5xl">
+        Event coverage built around replay value
+      </h2>
+      <p class="mt-5 text-base leading-8 text-highline-copy">
+        We use high-grade 4K HD cameras and can handle picture editing, layered live video feeds, and green-screen recording
+        to place people exactly where the story needs them.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2">
+      {services.map((service) => (
+        <div class="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(16,28,45,0.95),rgba(19,35,56,0.68))] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Coverage</p>
+          <h3 class="mt-3 font-display text-3xl uppercase leading-none tracking-[0.06em] text-white">{service}</h3>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-y border-white/10 bg-white/4">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-18 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_18rem] lg:px-8 lg:py-24">
+      <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-black/25">
+        <div class="border-b border-white/10 px-6 py-5">
+          <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Promo Video</p>
+          <h2 class="mt-3 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white">Highline Media promo reel</h2>
+        </div>
+        <video controls preload="none" poster="/maldives.jpg" class="aspect-video w-full bg-black">
+          <source src="/promo-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="grid gap-4">
+        {promoGallery.map((item) => (
+          <div class="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 p-3">
+            <img src={item.src} alt={item.alt} class="aspect-square w-full rounded-[1rem] object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="mx-auto max-w-7xl px-4 py-18 sm:px-6 lg:px-8 lg:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Latest Events</p>
+      <h2 class="mt-4 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white sm:text-5xl">
+        Recent event coverage
+      </h2>
+      <p class="mt-5 text-base leading-8 text-highline-copy">
+        Featured footage and supporting visuals that reflect Highline Media's event coverage style.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+        <video controls preload="none" poster="/team-photo.jpg" class="aspect-video w-full bg-black object-cover">
+          <source src="/event-side-1.mp4" type="video/mp4" />
+        </video>
+        <div class="border-t border-white/10 px-6 py-5">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">Event Reel</p>
+          <p class="mt-3 font-display text-3xl uppercase leading-none tracking-[0.06em] text-white">Featured event reel</p>
+          <p class="mt-3 text-sm leading-7 text-highline-muted">
+            A representative highlight reel showing Highline Media's on-location event coverage in motion.
+          </p>
+        </div>
+      </article>
+
+      <div class="grid gap-5">
+        {eventHighlights.map((highlight) => (
+          <article class="grid gap-4 rounded-[2rem] border border-white/10 bg-white/5 p-4 sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-center">
+            <img src={highlight.image} alt={highlight.title} class="aspect-square w-full rounded-[1.4rem] object-cover" loading="lazy" />
+            <div>
+              <p class="font-display text-2xl uppercase leading-none tracking-[0.08em] text-white">{highlight.title}</p>
+              <p class="mt-3 text-sm leading-7 text-highline-muted">{highlight.copy}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="border-t border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))]">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-18 sm:px-6 lg:grid-cols-[28rem_minmax(0,1fr)] lg:px-8 lg:py-24">
+      <div class="rounded-[2rem] border border-white/10 bg-highline-panel/80 p-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Contact</p>
+        <h2 class="mt-4 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white">Serving Charleston and surrounding communities</h2>
+        <p class="mt-5 text-base leading-8 text-highline-copy">
+          Based in Charleston, Illinois, Highline Media supports local families, events, and businesses with video coverage designed to last beyond the day itself.
+        </p>
+        <div class="mt-8 rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
+          <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-muted">Address</p>
+          <p class="mt-3 font-display text-3xl uppercase tracking-[0.12em] text-white">1269 Harrison Ave</p>
+          <p class="mt-2 text-sm leading-7 text-highline-copy">Charleston, Illinois 61920</p>
+        </div>
+        <a
+          href="https://maps.google.com/?q=1269+Harrison+Ave+Charleston+IL+61920"
+          target="_blank"
+          rel="noreferrer"
+          class="mt-8 inline-flex rounded-full bg-highline-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-highline-ink transition hover:bg-white"
+        >
+          Open Google Maps
+        </a>
+      </div>
+
+      <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-black/20">
+        <iframe
+          title="Highline Media location map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.994093218675!2d-88.16969648391509!3d39.492047979483274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8872e2a010112443%3A0x9072288899d86ddc!2s1269+Harrison+Ave%2C+Charleston%2C+IL+61920!5e0!3m2!1sen!2sus!4v1505763323460"
+          class="h-[28rem] w-full"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</Base>

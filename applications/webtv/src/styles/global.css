@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", sans-serif;
+  --color-webtv-accent: #15b881;
+  --color-webtv-shell: #515151;
+  --color-webtv-copy: #2b2b2b;
+  --color-webtv-card: #e6e6e6;
+  --color-webtv-border: #d8d8d8;
+}

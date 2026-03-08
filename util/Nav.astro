@@ -1,0 +1,84 @@
+---
+    const nav = [];
+    const {posts} = Astro.props;
+    const visiblePosts = posts.filter((post) => post.frontmatter?.nav !== false);
+    const rootOrder = [
+        '/',
+        '/the-fathers-house',
+        '/the-unknown-god',
+        '/sermons',
+        '/mission-statement',
+        '/contact-us'
+    ];
+    const normalizeUrl = (url: string) => url !== '/' && url.endsWith('/') ? url.slice(0, -1) : url;
+
+    const getParentPath = (paths: string[], deep: number) => {
+        return '/' + paths.slice(0, deep).join('/')
+    }
+
+    const findParent = (path: string[]) => {
+        let iterateNav = nav;
+        path.forEach((i, index) => {
+            const found = iterateNav.find(j => j.url === getParentPath(path, index + 1));
+            if (!found) { return }
+            iterateNav = found.children;
+        })
+        return iterateNav;
+    }
+
+
+    visiblePosts.sort((a,b) => a.url.length < b.url.length ? -1 : 1).forEach(i => {
+        const splitUrl = i.url.split('/');
+        const hasParents = splitUrl.length > 2;
+        let parent = nav;
+        if (hasParents) { 
+            const parentPath = splitUrl.slice(1, splitUrl.length - 1);
+            parent = findParent(parentPath)
+        }
+        parent.push({label: i.frontmatter.title, url: i.url || '/', children: []})
+    });
+
+    nav.sort((a, b) => {
+        const aIndex = rootOrder.indexOf(normalizeUrl(a.url));
+        const bIndex = rootOrder.indexOf(normalizeUrl(b.url));
+
+        if (aIndex !== -1 || bIndex !== -1) {
+            if (aIndex === -1) return 1;
+            if (bIndex === -1) return -1;
+            return aIndex - bIndex;
+        }
+
+        return a.label.localeCompare(b.label);
+    });
+---
+
+<nav>
+    <ul class="m-0 flex list-none items-center justify-center whitespace-nowrap p-0">
+        {nav.map((item) => 
+            <li class="group relative inline-block font-medium uppercase">
+                <a href={item.url} class="inline-block px-3 text-white hover:opacity-80">{item.label}</a>
+                {item.children.length > 0 && <ul class="hidden min-w-[250px] bg-white text-left text-black group-hover:block lg:absolute lg:left-0 lg:top-full lg:before:absolute lg:before:bottom-full lg:before:left-0 lg:before:block lg:before:h-5 lg:before:w-full lg:before:content-['']">
+                    {item.children.map(item => 
+                        <li class="group/item relative block">
+                            <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
+                            {item.children.length > 0 && <ul class="hidden min-w-[250px] bg-white text-left text-black group-hover/item:block lg:absolute lg:left-full lg:top-0">
+                                {item.children.map(item => 
+                                    <li class="group/subitem relative block">
+                                        <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
+                                        {item.children.length > 0 && <ul class="hidden min-w-[250px] bg-white text-left text-black group-hover/subitem:block lg:absolute lg:left-full lg:top-0">
+                                            {item.children.map(item => 
+                                                <li class="block">
+                                                    <a href={item.url} class="block px-3 py-2 hover:bg-gray-100">{item.label}</a>
+                                                </li>
+                                            )}
+                                        </ul>}
+                                    </li>
+                                )}
+                            </ul>}
+                        </li>
+                    )}
+                </ul>}
+            </li>
+        )}
+    </ul>
+</nav>

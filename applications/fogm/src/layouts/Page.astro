@@ -1,0 +1,186 @@
+---
+import Base from './Base.astro';
+const { frontmatter } = Astro.props;
+
+const sidebarSections = {
+    sermons: {
+        title: 'Sermons',
+        order: ['/sermons/', '/sermons/live-feed/', '/sermons/study-words/'],
+        videosByPath: {
+            default: ['Sp7J2GhGHWQ'],
+            '/sermons/': ['Sp7J2GhGHWQ', 'YrrbCf1eByA']
+        }
+    },
+    unknownGod: {
+        title: 'The Unknown God',
+        order: [
+            '/the-unknown-god/',
+            '/the-unknown-god/prison-ministry/',
+            '/the-unknown-god/teen-challenge/'
+        ],
+        videosByPath: {
+            default: ['Sp7J2GhGHWQ'],
+            '/the-unknown-god/': ['Sp7J2GhGHWQ', 'HwMsCQ7c87c']
+        }
+    },
+    fathersHouse: {
+        title: "The Father's House",
+        order: [
+            '/the-fathers-house/',
+            '/the-fathers-house/brazil-ministry/',
+            '/the-fathers-house/usa-ministry/',
+            '/the-fathers-house/jerusalem-ministry/',
+            '/the-fathers-house/kenya-africa/'
+        ],
+        videosByPath: {
+            default: ['Sp7J2GhGHWQ'],
+            '/the-fathers-house/usa-ministry/': ['Sp7J2GhGHWQ', 'HwMsCQ7c87c']
+        }
+    },
+    brazilMinistry: {
+        title: 'Brazil Ministry',
+        order: [
+            '/the-fathers-house/brazil-ministry/',
+            '/the-fathers-house/brazil-ministry/jump-start-english/',
+            '/the-fathers-house/brazil-ministry/jump-start-spanish/'
+        ],
+        videosByPath: {
+            default: ['Sp7J2GhGHWQ'],
+            '/the-fathers-house/brazil-ministry/': ['Sp7J2GhGHWQ', 'HwMsCQ7c87c', 'YrrbCf1eByA'],
+            '/the-fathers-house/brazil-ministry/jump-start-english/': ['Sp7J2GhGHWQ', 'YrrbCf1eByA']
+        }
+    }
+};
+
+const normalizePath = (path) => {
+    if (!path || path === '/') {
+        return '/';
+    }
+
+    return path.endsWith('/') ? path : `${path}/`;
+};
+
+const getParentPath = (path) => {
+    const normalized = normalizePath(path);
+
+    if (normalized === '/') {
+        return '/';
+    }
+
+    const segments = normalized.split('/').filter(Boolean);
+
+    if (segments.length <= 1) {
+        return '/';
+    }
+
+    return `/${segments.slice(0, -1).join('/')}/`;
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+const currentParentPath = getParentPath(currentPath);
+const sidebarKey = typeof frontmatter.sidebar === 'string' ? frontmatter.sidebar : undefined;
+const pageModules = [
+    ...Object.values(import.meta.glob('../pages/**/*.md', { eager: true })),
+    ...Object.values(import.meta.glob('../pages/**/*.astro', { eager: true }))
+];
+
+const sidebar =
+    sidebarKey
+        ? sidebarSections[sidebarKey]
+        : frontmatter.sidebar;
+
+const sidebarLinks = sidebarKey
+    ? pageModules
+        .filter((page) => {
+            if (!page.url || page.url === '/' || !page.frontmatter?.title) {
+                return false;
+            }
+
+            const pagePath = normalizePath(page.url);
+            return getParentPath(pagePath) === currentParentPath;
+        })
+        .map((page) => ({
+            label: page.frontmatter.title,
+            href: normalizePath(page.url),
+            date: page.frontmatter.date
+        }))
+        .sort((a, b) => {
+            const order = sidebar?.order ?? [];
+            const aIndex = order.indexOf(a.href);
+            const bIndex = order.indexOf(b.href);
+
+            if (aIndex !== -1 || bIndex !== -1) {
+                if (aIndex === -1) return 1;
+                if (bIndex === -1) return -1;
+                return aIndex - bIndex;
+            }
+
+            if (a.href === currentParentPath) return -1;
+            if (b.href === currentParentPath) return 1;
+
+            const aTime = a.date ? new Date(a.date).getTime() : 0;
+            const bTime = b.date ? new Date(b.date).getTime() : 0;
+            if (aTime !== bTime) {
+                return bTime - aTime;
+            }
+
+            return a.label.localeCompare(b.label);
+        })
+    : [];
+
+const sidebarVideos = sidebarKey
+    ? (sidebar?.videosByPath?.[currentPath] ?? sidebar?.videosByPath?.default ?? [])
+    : [];
+---
+
+<Base {frontmatter}>
+    <section class="bg-[linear-gradient(45deg,#e16521,#e4381C)] pt-[clamp(120px,18vw,180px)] pb-[clamp(40px,8vw,70px)]">
+        <div class="mx-auto w-[min(1200px,calc(100%-48px))]">
+            <h1 class="m-0 font-sans text-5xl uppercase">{frontmatter.title}</h1>
+        </div>
+    </section>
+    <article class="py-12">
+        <div class:list={[
+            'mx-auto w-[min(1200px,calc(100%-48px))]',
+            sidebar && 'grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start'
+        ]}>
+            <div class="fogm-page-content prose prose-invert prose-stone max-w-none prose-headings:font-sans prose-headings:uppercase prose-a:text-fogm-red hover:prose-a:opacity-80 prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-figure:mx-0 [&>h1:first-child]:hidden [&_ol]:list-none [&_ol]:pl-0 [&_ul]:list-none [&_ul]:pl-0">
+                <slot />
+            </div>
+            {sidebar && (
+                <aside class="space-y-6 lg:sticky lg:top-32">
+                    {sidebarVideos.map((videoId) => (
+                        <div class="rounded border border-white/10 bg-white/5 p-5">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${videoId}`}
+                                title="Sidebar video"
+                                class="aspect-video w-full border-0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                            />
+                        </div>
+                    ))}
+
+                    <div class="rounded border border-white/10 bg-white/5 p-6">
+                        <h2 class="m-0 font-sans text-3xl uppercase text-white">{sidebar.title}</h2>
+                        <ul class="mt-5 space-y-3 p-0">
+                            {sidebarLinks.map((link) => (
+                                <li class="list-none border-b border-white/10 pb-3 last:border-b-0 last:pb-0">
+                                    <a
+                                        href={link.href}
+                                        class:list={[
+                                            'transition hover:text-fogm-orange',
+                                            link.href === currentPath ? 'text-fogm-orange' : 'text-white/80'
+                                        ]}
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </aside>
+            )}
+        </div>
+    </article>
+</Base>

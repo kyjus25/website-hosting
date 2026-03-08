@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="WebTV">
+  <section class="bg-white">
+    <img src="/banner.png" alt="WebTV banner" class="block w-full" />
+  </section>
+
+  <section class="grid gap-4 pt-4">
+    <article class="border border-webtv-border bg-webtv-card p-6">
+      <h1 class="mt-0 text-4xl font-semibold">Welcome to WebTV</h1>
+      <p class="leading-7">
+        The previous branch rendered most content from a data store that is not
+        present in this repository. This migration keeps the site structure,
+        styling, and local media in a standalone Astro app so it can be updated
+        without the old runtime dependency.
+      </p>
+    </article>
+
+    <div class="grid gap-4 lg:grid-cols-3">
+      <article class="border border-webtv-border bg-webtv-card p-6">
+        <h2 class="mt-0 text-3xl font-semibold">Live</h2>
+        <p class="leading-7">Jump into the retained video page and use this app as the new home for streaming updates.</p>
+        <a class="mt-4 inline-flex items-center justify-center bg-webtv-accent px-5 py-3 text-white" href="/live">Open Live Page</a>
+      </article>
+      <article class="border border-webtv-border bg-webtv-card p-6">
+        <h2 class="mt-0 text-3xl font-semibold">Mission</h2>
+        <p class="leading-7">Restore the mission page directly in Astro instead of relying on the missing legacy content source.</p>
+        <a class="mt-4 inline-flex items-center justify-center bg-webtv-accent px-5 py-3 text-white" href="/mission">Read More</a>
+      </article>
+      <article class="border border-webtv-border bg-webtv-card p-6">
+        <h2 class="mt-0 text-3xl font-semibold">Contact</h2>
+        <p class="leading-7">Use the contact route as the landing point for outreach, updates, and follow-up.</p>
+        <a class="mt-4 inline-flex items-center justify-center bg-webtv-accent px-5 py-3 text-white" href="/contact">Contact</a>
+      </article>
+    </div>
+  </section>
+</Base>

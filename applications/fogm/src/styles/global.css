@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&family=Oswald:wght@300;400;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../../../../util/Nav.astro";
+
+@theme {
+  --font-sans: "Nunito Sans", sans-serif;
+  --font-display: "Oswald", sans-serif;
+  --color-fogm-orange: #e16521;
+  --color-fogm-red: #e4381c;
+  --color-fogm-bg: #151515;
+  --color-fogm-panel: #2d2d2d;
+  --color-fogm-copy: #a6a6a6;
+}

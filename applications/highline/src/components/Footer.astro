@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 bg-black/20">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.3fr_0.7fr] lg:px-8">
+    <div class="space-y-4">
+      <p class="font-display text-3xl uppercase tracking-[0.14em] text-white">Highline Media</p>
+      <p class="max-w-2xl text-sm leading-7 text-highline-muted sm:text-base">
+        Highline Media is turning your memories on high by creating an innovative solution that is simple and easy.
+        We help preserve family milestones, social events, business moments, and on-location experiences in video.
+      </p>
+    </div>
+
+    <div class="space-y-3 rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.28em] text-highline-gold">Charleston, Illinois</p>
+      <p class="font-display text-2xl uppercase tracking-[0.14em] text-white">1269 Harrison Ave</p>
+      <p class="text-sm leading-7 text-highline-muted">
+        Local event, family, and business video production rooted in Charleston.
+      </p>
+      <a
+        href="https://maps.google.com/?q=1269+Harrison+Ave+Charleston+IL+61920"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex rounded-full border border-white/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-white transition hover:border-highline-gold hover:bg-highline-gold hover:text-highline-ink"
+      >
+        Open Map
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-xs uppercase tracking-[0.24em] text-highline-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <span>&copy; {year} Highline Media</span>
+      <span>Video production for family, social, and business events</span>
+    </div>
+  </div>
+</footer>

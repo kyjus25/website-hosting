@@ -1,0 +1,92 @@
+---
+const blogPosts = Object.values(
+  import.meta.glob('../pages/blog/*.md', { eager: true })
+)
+  .filter((post) => post.url !== '/blog/')
+  .sort((a, b) => {
+    const aTime = new Date(a.frontmatter.date ?? 0).getTime();
+    const bTime = new Date(b.frontmatter.date ?? 0).getTime();
+    return bTime - aTime;
+  })
+  .slice(0, 3);
+---
+
+<div id="contact" class="bg-[linear-gradient(45deg,#e16521,#e4381C)] py-12">
+    <div class="mx-auto flex w-[min(1200px,calc(100%-48px))] flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+      <div>
+        <h1 class="m-0 font-sans text-5xl uppercase">Ready to get involved?</h1>
+        <p class="mt-2">
+          We need men and women all over the world who are fired up about the love
+          of Jesus
+        </p>
+      </div>
+      <div>
+        <!-- <button class="btn-primary" [routerLink]="'/contact-us'">Get Involved</button> -->
+      </div>
+    </div>
+  </div>
+  <div id="links" class="py-10">
+    <div class="mx-auto grid w-[min(1200px,calc(100%-48px))] gap-10 lg:grid-cols-4">
+      <div class="self-start">
+        <h2 class="relative mb-5 font-sans text-3xl uppercase after:absolute after:bottom-[-10px] after:left-0 after:h-px after:w-full after:bg-[linear-gradient(45deg,#e16521,#e4381C)]">Our Mission</h2>
+        <p class="opacity-80">To sum up our mission… To make an Unknown God, Known.</p>
+      </div>
+      <div class="self-start">
+        <h2 class="relative mb-5 font-sans text-3xl uppercase after:absolute after:bottom-[-10px] after:left-0 after:h-px after:w-full after:bg-[linear-gradient(45deg,#e16521,#e4381C)]">From the Blog</h2>
+        <ul class="space-y-2 pl-5 opacity-80">
+          {blogPosts.map((post) => (
+            <li>
+              <a href={post.url} class="text-white hover:text-fogm-red">
+                {post.frontmatter.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="self-start">
+        <h2 class="relative mb-5 font-sans text-3xl uppercase after:absolute after:bottom-[-10px] after:left-0 after:h-px after:w-full after:bg-[linear-gradient(45deg,#e16521,#e4381C)]">Subsidiaries</h2>
+        <ul class="pl-5 opacity-80">
+          <li>
+            <a href="https://www.facebook.com/fogtvinternational" target="_blank" class="text-white hover:text-fogm-red"
+              >FOG TV International</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/ProjectoUSA" target="_blank" class="text-white hover:text-fogm-red"
+              >The USA Project</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="self-start">
+        <h2 class="relative mb-5 font-sans text-3xl uppercase after:absolute after:bottom-[-10px] after:left-0 after:h-px after:w-full after:bg-[linear-gradient(45deg,#e16521,#e4381C)]">Our Locations</h2>
+       <ul>
+            <li>
+              <a href="/the-fathers-house/usa-ministry">
+                United State
+              </a>
+            </li>
+            <li>
+              <a href="/the-fathers-house/brazil-ministry">
+                Brazil
+              </a>
+            </li>
+            <li>
+              <a href="/the-fathers-house/jerusalem-ministry">
+                Jerusalem
+              </a>
+            </li>
+            <li>
+              <a href="/the-fathers-house/kenya-ministry">
+                Kenya
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="pb-8 text-center text-white/80">
+    Copyright &copy;2021 Fire of God Movement International | This template is
+    made with <i class="far fa-heart" /> by
+    <a href="https://colorlib.com" target="_blank" class="text-fogm-red hover:opacity-80">Colorlib</a>
+  </footer>

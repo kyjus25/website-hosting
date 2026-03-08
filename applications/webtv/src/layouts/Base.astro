@@ -1,0 +1,33 @@
+---
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const { title = 'WebTV' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="m-0 bg-webtv-shell font-sans text-webtv-copy">
+    <Header />
+    <div class="mx-auto grid w-[min(1200px,calc(100%-2rem))] gap-4 bg-white pb-4 shadow-[0_-3px_10px_2px_rgba(0,0,0,0.45)] lg:grid-cols-[240px_minmax(0,1fr)]">
+      <Sidebar />
+      <main class="min-w-0 px-4 pb-4 lg:pr-4 lg:pl-0">
+        <slot />
+      </main>
+    </div>
+    <div class="mx-auto w-[min(1200px,calc(100%-2rem))]">
+      <Footer />
+    </div>
+  </body>
+</html>

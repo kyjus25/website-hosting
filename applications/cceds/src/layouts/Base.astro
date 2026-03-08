@@ -1,0 +1,27 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const { title = 'CCEDS' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="m-0 bg-[#fbfbfb] font-sans text-cceds-copy">
+    <Header />
+    <main class="min-h-[calc(100vh-168px)]">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

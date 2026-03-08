@@ -1,0 +1,39 @@
+---
+import Page from '../../../layouts/Page.astro';
+
+type PostModule = {
+  frontmatter: {
+    title: string;
+    date?: string;
+    nav?: boolean;
+  };
+  url?: string;
+};
+
+const postModules = Object.values(
+  import.meta.glob<PostModule>('./*.md', { eager: true })
+).filter((post) => post.url && post.frontmatter.title);
+
+const posts = postModules
+  .sort((a, b) => {
+    const aTime = a.frontmatter.date ? new Date(a.frontmatter.date).getTime() : 0;
+    const bTime = b.frontmatter.date ? new Date(b.frontmatter.date).getTime() : 0;
+    return bTime - aTime;
+  });
+
+export const frontmatter = {
+  title: 'Study Words',
+  sidebar: 'sermons'
+};
+---
+
+<Page {frontmatter}>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title}</a>
+        {post.frontmatter.date && ` (${post.frontmatter.date.slice(0, 10)})`}
+      </li>
+    ))}
+  </ul>
+</Page>

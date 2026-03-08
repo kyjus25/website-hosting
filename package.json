@@ -1,26 +1,21 @@
 {
-  "name": "website-hosting",
-  "version": "0.0.1",
-  "scripts": {
-    "fogm": "cd applications/fogm && svelte-kit dev",
-    "webtv": "cd applications/webtv && svelte-kit dev",
-    "led": "cd applications/led && svelte-kit dev",
-    "route66": "cd applications/route66 && svelte-kit dev",
-    "cceds": "cd applications/cceds && svelte-kit dev",
-    "build-fogm": "cd applications/fogm && svelte-kit build",
-    "build-webtv": "cd applications/webtv && svelte-kit build",
-    "build-led": "cd applications/led && svelte-kit build",
-    "build-route66": "cd applications/route66 && svelte-kit build",
-    "build-cceds": "cd applications/cceds && svelte-kit build"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-node": "next",
-    "@sveltejs/kit": "next",
-    "autoprefixer": "^10.4.2",
-    "daisyui": "^1.19.0",
-    "postcss": "^8.4.5",
-    "svelte": "^3.46.1",
-    "svelte-markdown": "^0.2.0",
-    "tailwindcss": "^3.0.16"
-  }
+    "name": "workspace",
+    "scripts": {
+        "cceds:start": "cd ./applications/cceds && astro dev",
+        "cceds:build": "cd ./applications/cceds && astro build",
+        "fogm:start": "cd ./applications/fogm && astro dev",
+        "fogm:build": "cd ./applications/fogm && astro build",
+        "highline:start": "cd ./applications/highline && astro dev",
+        "highline:build": "cd ./applications/highline && astro build",
+        "led:start": "cd ./applications/led && astro dev",
+        "led:build": "cd ./applications/led && astro build",
+        "webtv:start": "cd ./applications/webtv && astro dev",
+        "webtv:build": "cd ./applications/webtv && astro build"
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.5.16",
+        "@tailwindcss/vite": "^4.2.1",
+        "astro": "^5.18.0",
+        "tailwindcss": "^4.2.1"
+    }
 }
