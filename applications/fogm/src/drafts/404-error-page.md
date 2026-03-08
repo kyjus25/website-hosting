@@ -14,6 +14,6 @@ nav: false
 // Or the page has been removed,
 // Actually, there is nothing to see here...
 
-<a href="https://fireofgodministries-thefathershouse.com" style=" font-family:'open-sans', arial; color: #444; font-size: 20px; padding: 20px; line-height: 30px; text-decoration: none;"><< Go back to home page >></a>
+<a href="/" style=" font-family:'open-sans', arial; color: #444; font-size: 20px; padding: 20px; line-height: 30px; text-decoration: none;"><< Go back to home page >></a>
 
 </div>
