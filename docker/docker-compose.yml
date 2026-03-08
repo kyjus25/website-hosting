@@ -43,3 +43,8 @@ services:
       - "80"
     environment:
       VIRTUAL_HOST: webtv.international
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
