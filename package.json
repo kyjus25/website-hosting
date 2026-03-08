@@ -1,16 +1,8 @@
 {
     "name": "workspace",
     "scripts": {
-        "cceds:start": "cd ./applications/cceds && astro dev",
-        "cceds:build": "cd ./applications/cceds && astro build",
-        "fogm:start": "cd ./applications/fogm && astro dev",
-        "fogm:build": "cd ./applications/fogm && astro build",
-        "highline:start": "cd ./applications/highline && astro dev",
-        "highline:build": "cd ./applications/highline && astro build",
-        "led:start": "cd ./applications/led && astro dev",
-        "led:build": "cd ./applications/led && astro build",
-        "webtv:start": "cd ./applications/webtv && astro dev",
-        "webtv:build": "cd ./applications/webtv && astro build"
+        "dev": "node ./scripts/astro-app.mjs dev",
+        "build": "node ./scripts/astro-app.mjs build"
     },
     "dependencies": {
         "@tailwindcss/typography": "^0.5.16",
