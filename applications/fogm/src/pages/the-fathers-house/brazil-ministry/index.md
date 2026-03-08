@@ -2,6 +2,7 @@
 title: "Brazil Ministry"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 17:00:12"
+sidebar: brazilMinistry
 ---
 # <img src="/wp-content/uploads/2017/06/1353281_10205478222249828_126637589_o.jpg" class="alignnone size-full wp-image-30 w-full" />
 

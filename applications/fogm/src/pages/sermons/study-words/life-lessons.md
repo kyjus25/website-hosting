@@ -3,6 +3,7 @@ title: "Life Lessons From the Past"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 22:13:43"
 nav: false
+sidebar: sermons
 ---
 # Life Lessons From the Past
 ## We let our guard down

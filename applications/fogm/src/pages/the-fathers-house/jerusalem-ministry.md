@@ -2,6 +2,7 @@
 title: "Jerusalem Ministry"
 layout: ../../layouts/Page.astro
 date: "2017-06-06 17:00:38"
+sidebar: fathersHouse
 ---
 # Jerusalem Ministry
 <iframe src="https://www.youtube.com/embed/PL7kuLp5dAA" width="100%" height="400" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>

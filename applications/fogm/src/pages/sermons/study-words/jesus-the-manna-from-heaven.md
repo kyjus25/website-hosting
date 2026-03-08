@@ -3,6 +3,7 @@ title: "Jesus: The Manna From Heaven"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 22:15:54"
 nav: false
+sidebar: sermons
 ---
 # Jesus: The Manna From Heaven
 ## WHO IS THIS JESUS?

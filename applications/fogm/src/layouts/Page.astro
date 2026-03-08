@@ -1,17 +1,74 @@
 ---
 import Base from './Base.astro';
-const { frontmatter } = Astro.props
+const { frontmatter } = Astro.props;
+
+const sidebarSections = {
+    sermons: {
+        title: 'Sermons',
+        links: [
+            { label: 'Live Feed', href: '/sermons/live-feed/' },
+            { label: 'Study Words', href: '/sermons/study-words/' }
+        ]
+    },
+    unknownGod: {
+        title: 'The Unknown God',
+        links: [
+            { label: 'Prison Ministry', href: '/the-unknown-god/prison-ministry/' },
+            { label: 'Teen Challenge', href: '/the-unknown-god/teen-challenge/' }
+        ]
+    },
+    fathersHouse: {
+        title: "The Father's House",
+        links: [
+            { label: 'Brazil Ministry', href: '/the-fathers-house/brazil-ministry/' },
+            { label: 'USA Ministry', href: '/the-fathers-house/usa-ministry/' },
+            { label: 'Jerusalem Ministry', href: '/the-fathers-house/jerusalem-ministry/' },
+            { label: 'Kenya Africa', href: '/the-fathers-house/kenya-africa/' }
+        ]
+    },
+    brazilMinistry: {
+        title: 'Brazil Ministry',
+        links: [
+            { label: 'Jump Start English', href: '/the-fathers-house/brazil-ministry/jump-start-english/' },
+            { label: 'Jump Start Spanish', href: '/the-fathers-house/brazil-ministry/jump-start-spanish/' }
+        ]
+    }
+};
+
+const sidebar =
+    typeof frontmatter.sidebar === 'string'
+        ? sidebarSections[frontmatter.sidebar]
+        : frontmatter.sidebar;
 ---
 
 <Base {frontmatter}>
     <section class="bg-[linear-gradient(45deg,#e16521,#e4381C)] pt-[clamp(120px,18vw,180px)] pb-[clamp(40px,8vw,70px)]">
         <div class="mx-auto w-[min(1200px,calc(100%-48px))]">
-            <h1 class="m-0 font-display text-5xl uppercase">{frontmatter.title}</h1>
+            <h1 class="m-0 font-sans text-5xl uppercase">{frontmatter.title}</h1>
         </div>
     </section>
     <article class="py-12">
-        <div class="prose prose-invert prose-stone mx-auto w-[min(1200px,calc(100%-48px))] max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-fogm-red hover:prose-a:opacity-80 prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-figure:mx-0">
-            <slot />
+        <div class:list={[
+            'mx-auto w-[min(1200px,calc(100%-48px))]',
+            sidebar && 'grid gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start'
+        ]}>
+            <div class="fogm-page-content prose prose-invert prose-stone max-w-none prose-headings:font-sans prose-headings:uppercase prose-a:text-fogm-red hover:prose-a:opacity-80 prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-figure:mx-0 [&>h1:first-child]:hidden [&_ol]:list-none [&_ol]:pl-0 [&_ul]:list-none [&_ul]:pl-0">
+                <slot />
+            </div>
+            {sidebar && (
+                <aside class="rounded border border-white/10 bg-white/5 p-6 lg:sticky lg:top-32">
+                    <h2 class="m-0 font-sans text-3xl uppercase text-white">{sidebar.title}</h2>
+                    <ul class="mt-5 space-y-3 p-0">
+                        {sidebar.links.map((link) => (
+                            <li class="list-none border-b border-white/10 pb-3 last:border-b-0 last:pb-0">
+                                <a href={link.href} class="text-white/80 transition hover:text-fogm-orange">
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </aside>
+            )}
         </div>
     </article>
 </Base>

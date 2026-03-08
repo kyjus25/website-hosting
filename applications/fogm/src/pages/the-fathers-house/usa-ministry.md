@@ -2,6 +2,7 @@
 title: "USA Ministry"
 layout: ../../layouts/Page.astro
 date: "2017-06-06 17:00:24"
+sidebar: fathersHouse
 ---
 # USA Ministry
 ## America And Beyond: Strangers In A Foreign Home Land.

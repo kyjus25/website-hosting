@@ -2,6 +2,7 @@
 title: "Kenya Africa"
 layout: ../../layouts/Page.astro
 date: "2017-12-13 20:24:11"
+sidebar: fathersHouse
 ---
 # Kenya Africa
 Welcome to Kenya Africa

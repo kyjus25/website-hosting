@@ -3,6 +3,7 @@ title: "The Sandbox"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 22:11:59"
 nav: false
+sidebar: sermons
 ---
 # The Sandbox
 While I was pressing in this morning something was shown to me i want to share. I am going to tell what was shown to me and then tell what i was told right after as far as what it ment. kids like to play in sand boxes .. in there you can build what ever you want to build, like a castle ,tunel, roads etcc.. When they play in the sandbox sand gets all over them and they need to clean up so the parents tell them go inside, leave your clothes on the floor by the door and take a shower. Please dont run threw the house but go diirectly to the shower, I dont want that sand all over the house... We stand in the soap and water and it runs down the drain ...

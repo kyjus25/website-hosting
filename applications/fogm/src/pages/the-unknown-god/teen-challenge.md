@@ -2,6 +2,7 @@
 title: "Teen Challenge"
 layout: ../../layouts/Page.astro
 date: "2017-06-06 17:02:08"
+sidebar: unknownGod
 ---
 # Teen Challenge
 <div class="center">

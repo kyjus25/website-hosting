@@ -3,6 +3,7 @@ title: "Flame On"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 17:35:04"
 nav: false
+sidebar: sermons
 ---
 # Flame On
 ## Are We A Flame For God Or Just A Spark?

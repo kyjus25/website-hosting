@@ -2,6 +2,7 @@
 title: "The Father's House"
 layout: ../../layouts/Page.astro
 date: "2017-06-06 16:59:39"
+sidebar: fathersHouse
 ---
 # The Fathers House is the church name of Fire Of God Ministries but more importantly is the house God is building.
 

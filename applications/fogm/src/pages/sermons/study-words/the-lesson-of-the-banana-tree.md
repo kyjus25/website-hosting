@@ -3,6 +3,7 @@ title: "The Lesson of the Banana Tree"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 22:06:41"
 nav: false
+sidebar: sermons
 ---
 # The Lesson of the Banana Tree
 <div id="mod_40157575" class="module moduleText color0">

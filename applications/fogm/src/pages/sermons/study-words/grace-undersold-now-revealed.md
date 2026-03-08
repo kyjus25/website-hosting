@@ -3,6 +3,7 @@ title: "Grace Undersold & Now Revealed"
 layout: ../../../layouts/Page.astro
 date: "2017-06-06 22:19:02"
 nav: false
+sidebar: sermons
 ---
 # Grace Undersold & Now Revealed
 We all know very well that Grace is unmerited favor from God. Many of us have heard that all our life.
