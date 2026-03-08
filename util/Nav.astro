@@ -2,6 +2,13 @@
     const nav = [];
     const {posts} = Astro.props;
     const visiblePosts = posts.filter((post) => post.frontmatter?.nav !== false);
+    const rootOrder = [
+        '/the-fathers-house/',
+        '/the-unknown-god/',
+        '/sermons/',
+        '/mission-statement/',
+        '/contact-us/'
+    ];
 
     const getParentPath = (paths: string[], deep: number) => {
         return '/' + paths.slice(0, deep).join('/')
@@ -27,6 +34,19 @@
             parent = findParent(parentPath)
         }
         parent.push({label: i.frontmatter.title, url: i.url || '/', children: []})
+    });
+
+    nav.sort((a, b) => {
+        const aIndex = rootOrder.indexOf(a.url);
+        const bIndex = rootOrder.indexOf(b.url);
+
+        if (aIndex !== -1 || bIndex !== -1) {
+            if (aIndex === -1) return 1;
+            if (bIndex === -1) return -1;
+            return aIndex - bIndex;
+        }
+
+        return a.label.localeCompare(b.label);
     });
 ---
 
