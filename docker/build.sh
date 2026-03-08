@@ -19,6 +19,17 @@ if [[ ${#APPS[@]} -eq 0 ]]; then
   exit 1
 fi
 
+if [[ $# -gt 0 ]]; then
+  APPS=()
+  for requested_app in "$@"; do
+    if [[ ! -d "${APPLICATIONS_DIR}/${requested_app}" ]]; then
+      echo "Unknown application: ${requested_app}" >&2
+      exit 1
+    fi
+    APPS+=("${requested_app}")
+  done
+fi
+
 if [[ ! -x "${REPO_ROOT}/node_modules/.bin/astro" ]]; then
   echo "Installing workspace dependencies"
   (cd "${REPO_ROOT}" && npm install)
