@@ -42,23 +42,51 @@ const promoGallery = [
   { src: '/impala-promo.png', alt: 'Impala promo graphic' }
 ];
 
-const eventHighlights = [
+const heroVideo = {
+  id: 'vCtr-u0QhcI',
+  title: 'Highline landing video'
+};
+
+const promoVideo = {
+  id: 'rX8TJ0x_Lbw',
+  title: 'Highline Media promo reel'
+};
+
+const eventVideos = [
   {
-    title: 'Aerial coverage',
-    copy: 'Drone-style visuals and sweeping environmental footage that add scale and motion to event storytelling.',
-    image: '/drone.png'
+    id: '15qfxd9hGmE',
+    title: 'DJI 0011',
+    copy: 'Aerial footage with broad movement and environmental framing suited to event openers and scenic transitions.'
   },
   {
-    title: 'On-location portraits',
-    copy: 'Family, social, and business moments framed for replay rather than throwaway clips.',
-    image: '/team-photo.jpg'
+    id: 'cqEMnrxArO8',
+    title: 'DJI 0008',
+    copy: 'Low, sweeping passes that show how Highline layers motion and location into polished event coverage.'
   },
   {
-    title: 'Destination atmosphere',
-    copy: 'Scenic visuals that add scale, mood, and a polished finish to event storytelling.',
-    image: '/maldives.jpg'
+    id: 'EImVNl8_vSA',
+    title: 'DJI 0006',
+    copy: 'Atmospheric drone footage that adds scale, pacing, and a cinematic finish to the final edit.'
   }
 ];
+
+const embedUrl = (id: string, options: { autoplay?: boolean; muted?: boolean; loop?: boolean } = {}) => {
+  const params = new URLSearchParams({
+    rel: '0',
+    modestbranding: '1',
+    playsinline: '1'
+  });
+
+  if (options.autoplay) params.set('autoplay', '1');
+  if (options.muted) params.set('mute', '1');
+  if (options.loop) {
+    params.set('loop', '1');
+    params.set('playlist', id);
+  }
+  if (options.autoplay || options.muted) params.set('controls', '0');
+
+  return `https://www.youtube.com/embed/${id}?${params.toString()}`;
+};
 ---
 
 <Base
@@ -66,17 +94,10 @@ const eventHighlights = [
   description="Highline Media captures weddings, church events, sports, work events, and family moments with 4K video and polished promo visuals."
 >
   <section class="relative isolate overflow-hidden">
-    <video
-      class="absolute inset-0 h-full w-full object-cover opacity-35"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster="/maldives.jpg"
-    >
-      <source src="/landing-video.mp4" type="video/mp4" />
-    </video>
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-25"
+      style="background-image: url('/maldives.jpg');"
+    ></div>
     <div class="absolute inset-0 bg-[linear-gradient(115deg,rgba(5,10,18,0.96),rgba(5,10,18,0.72)_46%,rgba(5,10,18,0.46)_75%,rgba(5,10,18,0.86))]"></div>
     <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-highline-ink to-transparent"></div>
 
@@ -125,7 +146,18 @@ const eventHighlights = [
       </div>
 
       <aside class="self-end rounded-[2rem] border border-white/10 bg-[rgba(16,28,45,0.88)] p-7 shadow-2xl shadow-black/30 backdrop-blur-xl">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">What We Capture</p>
+        <div class="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30">
+          <iframe
+            src={embedUrl(heroVideo.id, { autoplay: true, muted: true, loop: true })}
+            title={heroVideo.title}
+            class="aspect-video w-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <p class="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">What We Capture</p>
         <ul class="mt-6 space-y-4">
           {services.map((service) => (
             <li class="flex items-start gap-3 border-b border-white/10 pb-4 last:border-b-0 last:pb-0">
@@ -247,15 +279,21 @@ const eventHighlights = [
   </section>
 
   <section class="border-y border-white/10 bg-white/4">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-18 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_18rem] lg:px-8 lg:py-24">
-      <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-black/25">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-18 sm:px-6 lg:items-start lg:grid-cols-[minmax(0,1.05fr)_18rem] lg:px-8 lg:py-24">
+      <div class="self-start overflow-hidden rounded-[2rem] border border-white/10 bg-black/25">
         <div class="border-b border-white/10 px-6 py-5">
           <p class="text-sm font-semibold uppercase tracking-[0.32em] text-highline-gold">Promo Video</p>
           <h2 class="mt-3 font-display text-4xl uppercase leading-none tracking-[0.08em] text-white">Highline Media promo reel</h2>
         </div>
-        <video controls preload="none" poster="/maldives.jpg" class="aspect-video w-full bg-black">
-          <source src="/promo-video.mp4" type="video/mp4" />
-        </video>
+        <iframe
+          src={embedUrl(promoVideo.id)}
+          title={promoVideo.title}
+          class="aspect-video w-full border-0 bg-black"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div class="grid gap-4">
@@ -279,31 +317,25 @@ const eventHighlights = [
       </p>
     </div>
 
-    <div class="mt-10 grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
-      <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-        <video controls preload="none" poster="/team-photo.jpg" class="aspect-video w-full bg-black object-cover">
-          <source src="/event-side-1.mp4" type="video/mp4" />
-        </video>
-        <div class="border-t border-white/10 px-6 py-5">
-          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">Event Reel</p>
-          <p class="mt-3 font-display text-3xl uppercase leading-none tracking-[0.06em] text-white">Featured event reel</p>
-          <p class="mt-3 text-sm leading-7 text-highline-muted">
-            A representative highlight reel showing Highline Media's on-location event coverage in motion.
-          </p>
-        </div>
-      </article>
-
-      <div class="grid gap-5">
-        {eventHighlights.map((highlight) => (
-          <article class="grid gap-4 rounded-[2rem] border border-white/10 bg-white/5 p-4 sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-center">
-            <img src={highlight.image} alt={highlight.title} class="aspect-square w-full rounded-[1.4rem] object-cover" loading="lazy" />
-            <div>
-              <p class="font-display text-2xl uppercase leading-none tracking-[0.08em] text-white">{highlight.title}</p>
-              <p class="mt-3 text-sm leading-7 text-highline-muted">{highlight.copy}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+    <div class="mt-10 grid gap-5 lg:grid-cols-3">
+      {eventVideos.map((video) => (
+        <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
+          <iframe
+            src={embedUrl(video.id)}
+            title={video.title}
+            class="aspect-video w-full border-0 bg-black"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="border-t border-white/10 px-6 py-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-highline-gold">Event Reel</p>
+            <p class="mt-3 font-display text-3xl uppercase leading-none tracking-[0.06em] text-white">{video.title}</p>
+            <p class="mt-3 text-sm leading-7 text-highline-muted">{video.copy}</p>
+          </div>
+        </article>
+      ))}
     </div>
   </section>
 
