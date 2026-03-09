@@ -149,46 +149,91 @@ prompt_for_apps() {
 prompt_for_apps "$@"
 
 TMP_DIR="$(mktemp -d)"
-
-run_remote_ssh() {
-  ssh "${REMOTE_HOST}" "$@"
-}
-
-upload_file_via_ssh() {
-  local local_path="$1"
-  local remote_path="$2"
-
-  run_remote_ssh "cat > ${remote_path}" < "${local_path}"
-}
+UPLOAD_ROOT="${TMP_DIR}/upload-home"
+UPLOAD_ARCHIVE="${TMP_DIR}/deploy-bundle.tar"
+SSH_PASSWORD=""
 
 cleanup() {
+  SSH_PASSWORD=""
   rm -rf "${TMP_DIR}"
 }
 trap cleanup EXIT
 
+can_use_passwordless_ssh() {
+  ssh -o BatchMode=yes -o ConnectTimeout=5 "${REMOTE_HOST}" true >/dev/null 2>&1
+}
+
+prompt_for_ssh_password() {
+  if [[ -n "${SSH_PASSWORD}" || -n "${DEPLOY_SSH_PASSWORD:-}" ]]; then
+    return
+  fi
+
+  if ! [[ -t 0 && -t 1 ]]; then
+    return
+  fi
+
+  printf '%s password: ' "${REMOTE_HOST}"
+  IFS= read -rs SSH_PASSWORD
+  printf '\n'
+}
+
+prepare_upload_bundle() {
+  mkdir -p "${UPLOAD_ROOT}/Documents/website-redesign" "${UPLOAD_ROOT}/docker-imports"
+
+  cp "${SCRIPT_DIR}/docker-compose.yml" "${UPLOAD_ROOT}/Documents/website-redesign/docker-compose.yml"
+
+  local app archive_path
+  for app in "${SELECTED_APPS[@]}"; do
+    archive_path="${TMP_DIR}/${app}.tar"
+    cp "${archive_path}" "${UPLOAD_ROOT}/docker-imports/${app}.tar"
+  done
+
+  COPYFILE_DISABLE=1 tar -cf "${UPLOAD_ARCHIVE}" -C "${UPLOAD_ROOT}" .
+}
+
+run_remote_deploy() {
+  local upload_size remote_command app
+  local -a ssh_cmd
+
+  upload_size="$(stat -f %z "${UPLOAD_ARCHIVE}")"
+  remote_command="mkdir -p ${REMOTE_DIR} ${REMOTE_TMP_DIR} && tar -xf - -C ~"
+
+  for app in "${SELECTED_APPS[@]}"; do
+    remote_command+=" && docker load --input ${REMOTE_TMP_DIR}/${app}.tar && rm -f ${REMOTE_TMP_DIR}/${app}.tar"
+  done
+
+  remote_command+=" && cd ${REMOTE_DIR} && docker compose up -d --remove-orphans ${REMOTE_SERVICES[*]}"
+  ssh_cmd=(ssh "${REMOTE_HOST}" "${remote_command}")
+
+  echo "Uploading deploy bundle to ${REMOTE_HOST}"
+  if can_use_passwordless_ssh; then
+    "${ssh_cmd[@]}" < <(pv -ptebar -s "${upload_size}" "${UPLOAD_ARCHIVE}")
+    return
+  fi
+
+  prompt_for_ssh_password
+  if [[ -n "${DEPLOY_SSH_PASSWORD:-}" ]]; then
+    SSHPASS="${DEPLOY_SSH_PASSWORD}" sshpass -e "${ssh_cmd[@]}" < <(pv -ptebar -s "${upload_size}" "${UPLOAD_ARCHIVE}")
+    return
+  fi
+
+  if [[ -n "${SSH_PASSWORD}" ]]; then
+    SSHPASS="${SSH_PASSWORD}" sshpass -e "${ssh_cmd[@]}" < <(pv -ptebar -s "${upload_size}" "${UPLOAD_ARCHIVE}")
+    return
+  fi
+
+  "${ssh_cmd[@]}" < <(pv -ptebar -s "${upload_size}" "${UPLOAD_ARCHIVE}")
+}
+
 IMAGE_PLATFORM="linux/amd64" IMAGE_OUTPUT_MODE="archive" IMAGE_OUTPUT_DIR="${TMP_DIR}" "${SCRIPT_DIR}/build.sh" "${SELECTED_APPS[@]}"
-
-echo "Preparing remote directories on ${REMOTE_HOST}"
-run_remote_ssh "mkdir -p ${REMOTE_DIR} ${REMOTE_TMP_DIR}"
-
-echo "Uploading docker-compose.yml"
-upload_file_via_ssh "${SCRIPT_DIR}/docker-compose.yml" "${REMOTE_DIR}/docker-compose.yml"
-
-for app in "${SELECTED_APPS[@]}"; do
-  archive_path="${TMP_DIR}/${app}.tar"
-  remote_archive_path="${REMOTE_TMP_DIR}/${app}.tar"
-
-  echo "Uploading ${app} image archive"
-  upload_file_via_ssh "${archive_path}" "${remote_archive_path}"
-
-  echo "Importing ${app}:latest on ${REMOTE_HOST}"
-  run_remote_ssh "docker load --input ${remote_archive_path} && rm -f ${remote_archive_path}"
-done
 
 REMOTE_SERVICES=()
 for app in "${SELECTED_APPS[@]}"; do
   REMOTE_SERVICES+=("$(printf '%q' "${app}")")
 done
 
-echo "Restarting selected remote services"
-run_remote_ssh "cd ${REMOTE_DIR} && docker compose up -d --remove-orphans ${REMOTE_SERVICES[*]}"
+echo "Preparing deploy bundle"
+prepare_upload_bundle
+
+echo "Deploying selected remote services"
+run_remote_deploy
